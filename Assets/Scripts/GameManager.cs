@@ -37,6 +37,10 @@ public class GameManager : MonoBehaviour
         elapsedTime += Time.deltaTime;
         if(elapsedTime >= 60f){
             isDay = !isDay;
+            if (isDay)
+            {
+                QuestManager.Instance.NextQuest();
+            }
             elapsedTime = 0f;
         }
     }
