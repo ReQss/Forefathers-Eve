@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Overworld - Forest - Thick 256x144_0: -8519731617771028112
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

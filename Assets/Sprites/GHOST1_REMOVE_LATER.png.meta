@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ac30d37026be2d04486541934f6ecb80
+guid: d74e524f55ea90f4cb49722acaa7802f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3542957051508743412
-    second: Overworld - Terrain 1 - Flat 256x128_0
+      213: 2089955977967516533
+    second: ghost-11530983900yvbwlkjknr_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Overworld - Terrain 1 - Flat 256x128_0
+      name: ghost-11530983900yvbwlkjknr_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 768
-        height: 768
+        width: 840
+        height: 859
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c032b524553e4dec0800000000000000
-      internalID: -3542957051508743412
+      spriteID: 57b35fe83e3010d10800000000000000
+      internalID: 2089955977967516533
       vertices: []
       indices: 
       edges: []
@@ -148,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Overworld - Terrain 1 - Flat 256x128_0: -3542957051508743412
+      ghost-11530983900yvbwlkjknr_0: 2089955977967516533
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
