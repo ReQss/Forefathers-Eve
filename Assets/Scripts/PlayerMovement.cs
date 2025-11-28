@@ -6,8 +6,10 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 4f;
     private Rigidbody2D rb;
     private Vector2 input;
-    private SpriteRenderer spriteRenderer;
+    // private SpriteRenderer spriteRenderer;
     private Interactable currentInteractable = null;
+    private Animator animator; // Dodaj animator
+
     void Awake()
     {
         if (Instance == null) Instance = this;
@@ -17,7 +19,8 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        // spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>(); // Pobierz animator
     }
 
     void Update()
@@ -29,8 +32,16 @@ public class PlayerMovement : MonoBehaviour
         ).normalized;
 
         // flip
-        if (input.x < 0) spriteRenderer.flipX = false;
-        else if (input.x > 0) spriteRenderer.flipX = true;
+        // flip rigowanej postaci
+        if (input.x < 0)
+            transform.localScale = new Vector3(1, 1, 1);
+        else if (input.x > 0)
+            transform.localScale = new Vector3(-1, 1, 1);
+
+
+        // ustaw animację "Running" gdy idziemy w bok lub w górę
+        if (animator != null)
+            animator.SetBool("Running", input.magnitude > 0);
 
         if (Input.GetKeyDown(KeyCode.E) && currentInteractable != null)
         {
