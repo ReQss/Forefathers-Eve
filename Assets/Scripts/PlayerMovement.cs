@@ -43,9 +43,10 @@ public class PlayerMovement : MonoBehaviour
         if (animator != null)
             animator.SetBool("Running", input.magnitude > 0);
 
-        if (Input.GetKeyDown(KeyCode.E) && currentInteractable != null)
+        if (Input.GetKeyDown(KeyCode.E) )
         {
-            currentInteractable.Interaction();
+            animator.SetTrigger("Attack"); // uruchom animację "Attack"
+            // currentInteractable.Interaction();
         }
     }
 
