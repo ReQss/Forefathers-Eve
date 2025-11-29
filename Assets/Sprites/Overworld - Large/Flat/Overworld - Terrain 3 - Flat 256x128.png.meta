@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Overworld - Terrain 3 - Flat 256x128_0: 4603075713691528816
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
