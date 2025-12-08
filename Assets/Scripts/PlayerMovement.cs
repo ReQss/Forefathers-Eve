@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
     public GameObject lantern;
     public GameObject rake;
     private bool isAttacking = true;
+    public bool isMovementLocked = false;
+    public AudioSource walkAudioSource;
 
     void Awake()
     {
@@ -28,6 +30,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        if(isMovementLocked) return;
         // ruch
         input = new Vector2(
             Input.GetAxisRaw("Horizontal"),
@@ -45,6 +48,21 @@ public class PlayerMovement : MonoBehaviour
         // ustaw animację "Running" gdy idziemy w bok lub w górę
         if (animator != null)
             animator.SetBool("Running", input.magnitude > 0);
+
+        // Footsteps sound
+        if (walkAudioSource != null)
+        {
+            if (input.magnitude > 0)
+            {
+                if (!walkAudioSource.isPlaying)
+                    walkAudioSource.Play();
+            }
+            else
+            {
+                if (walkAudioSource.isPlaying)
+                    walkAudioSource.Stop();
+            }
+        }
 
         if (Input.GetKeyDown(KeyCode.E) )
         {

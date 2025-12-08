@@ -5,6 +5,7 @@ using UnityEngine;
 public class UIHandler : MonoBehaviour
 {
     public static UIHandler Instance { get; private set; }
+    public AnimationFramesClick animationFramesClick;
 
     public TextMeshProUGUI dayTimer;
     public TextMeshProUGUI playerTipsText;

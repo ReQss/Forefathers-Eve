@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour
     public int health;
     public float elapsedTime = 0f;
     public bool isDay = true;
+    public int collectedWood=0;
+    public int collectedStone=0;
 
     void Awake()
     {
