@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     private Animator animator; // Dodaj animator
     public GameObject lantern;
     public GameObject rake;
+    private bool isAttacking = true;
 
     void Awake()
     {
