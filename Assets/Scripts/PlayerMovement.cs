@@ -9,6 +9,8 @@ public class PlayerMovement : MonoBehaviour
     // private SpriteRenderer spriteRenderer;
     private Interactable currentInteractable = null;
     private Animator animator; // Dodaj animator
+    public GameObject lantern;
+    public GameObject rake;
 
     void Awake()
     {
@@ -54,6 +56,16 @@ public class PlayerMovement : MonoBehaviour
                 animator.SetTrigger("Attack"); // uruchom animację "Attack" tylko jeśli nie ma interakcji
             }
         }
+    }
+    public void SetLanternState(bool state)
+    {
+        if(lantern != null)
+        lantern.SetActive(state);
+    }
+    public void SetRakeState(bool state)
+    {
+        if(rake != null)
+        rake.SetActive(state);
     }
 
     void FixedUpdate()

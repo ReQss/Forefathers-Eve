@@ -35,12 +35,27 @@ public class GameManager : MonoBehaviour
     public void DayNightCycle(){
         
         elapsedTime += Time.deltaTime;
-        if(elapsedTime >= 60f){
+        if (elapsedTime>=40f)
+        {
+            if (isDay)
+            {
+                 PlayerMovement.Instance.SetLanternState(true); 
+                PlayerMovement.Instance.SetRakeState(false);
+            }
+            else 
+            {
+                 PlayerMovement.Instance.SetLanternState(false); 
+                PlayerMovement.Instance.SetRakeState(true);
+            }
+        }
+       
+        if(elapsedTime >= 59f){
             isDay = !isDay;
             if (isDay)
             {
                 QuestManager.Instance.NextQuest();
             }
+           
             elapsedTime = 0f;
         }
     }
