@@ -28,9 +28,29 @@ public class PlayerMovement : MonoBehaviour
         animator = GetComponent<Animator>(); // Pobierz animator
     }
 
+    public void StopMovement()
+    {
+        input = Vector2.zero;
+        if (rb != null)
+            rb.linearVelocity = Vector2.zero;
+    }
     void Update()
     {
         if(isMovementLocked) return;
+         if (Input.GetKeyDown(KeyCode.E) )
+        {
+            if (currentInteractable != null)
+            {
+                animator.SetTrigger("Interact");
+                
+                StopMovement();
+                currentInteractable.Interaction();
+            }
+            else
+            {
+                animator.SetTrigger("Attack"); // uruchom animację "Attack" tylko jeśli nie ma interakcji
+            }
+        }
         // ruch
         input = new Vector2(
             Input.GetAxisRaw("Horizontal"),
@@ -64,18 +84,7 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.E) )
-        {
-            if (currentInteractable != null)
-            {
-                animator.SetTrigger("Interact");
-                currentInteractable.Interaction();
-            }
-            else
-            {
-                animator.SetTrigger("Attack"); // uruchom animację "Attack" tylko jeśli nie ma interakcji
-            }
-        }
+       
     }
     public void SetLanternState(bool state)
     {
@@ -90,6 +99,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+        if(isMovementLocked) return;
         rb.MovePosition(rb.position + input * speed * Time.fixedDeltaTime);
     }
 
