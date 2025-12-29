@@ -68,6 +68,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (currentInteractable != null)
             {
+                animator.SetTrigger("Interact");
                 currentInteractable.Interaction();
             }
             else
