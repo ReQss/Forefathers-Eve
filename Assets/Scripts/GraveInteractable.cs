@@ -30,6 +30,8 @@ public class GraveInteractable : Interactable
                         GameManager.Instance.questVariables.cleanedGrave += 1;
                          if(resourceType != ResourceType.None)
                         {
+                                gameObject.tag = "Untagged";
+
                             UIHandler.Instance.RemoveResourceUI(resourceType);
                         }
                     }

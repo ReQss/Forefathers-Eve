@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 input;
     // private SpriteRenderer spriteRenderer;
     private Interactable currentInteractable = null;
-    private Animator animator; // Dodaj animator
+    public Animator animator; // Dodaj animator
     public GameObject lantern;
     public GameObject rake;
     private bool isAttacking = true;
@@ -92,7 +92,7 @@ public class PlayerMovement : MonoBehaviour
         rb.MovePosition(rb.position + input * speed * Time.fixedDeltaTime);
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerStay2D(Collider2D other)
     {
         if (other.CompareTag("Interactable"))
         {

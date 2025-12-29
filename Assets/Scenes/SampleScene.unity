@@ -3783,6 +3783,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
+  animator: {fileID: 0}
   lantern: {fileID: 0}
   rake: {fileID: 0}
   isMovementLocked: 0
@@ -4683,7 +4684,7 @@ GameObject:
   - component: {fileID: 718199243}
   - component: {fileID: 718199242}
   - component: {fileID: 718199241}
-  - component: {fileID: 718199240}
+  - component: {fileID: 718199244}
   m_Layer: 0
   m_Name: Church
   m_TagString: Interactable
@@ -4691,20 +4692,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &718199240
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 718199239}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07bb6e46b5a07bf4b894f9bdd2febce6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactionTip: Praise the lord!
-  resourceType: 0
 --- !u!61 &718199241
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4822,6 +4809,21 @@ Transform:
   - {fileID: 1671564007}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &718199244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 718199239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e942f0097484ddb47bfbbb5727a4b7cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionTip: Hmm.... This looks interesting...
+  resourceType: 4
+  interactionTipAfter: Praise the Lord!
 --- !u!1 &726834550
 GameObject:
   m_ObjectHideFlags: 0
@@ -7498,7 +7500,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1072706201}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 0.19311647, w: 0.98117584}
+  m_LocalRotation: {x: -0, y: -0, z: -0.3554812, w: 0.9346835}
   m_LocalPosition: {x: 0.506, y: 0.052, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -8660,7 +8662,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1367169630}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 0.18510859, w: 0.98271805}
+  m_LocalRotation: {x: -0, y: -0, z: 0.65044343, w: 0.75955474}
   m_LocalPosition: {x: 0.449, y: -0.041, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -8691,7 +8693,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1387898487}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.16480993, w: 0.9863253}
+  m_LocalRotation: {x: -0, y: -0, z: -0.0858067, w: 0.99631184}
   m_LocalPosition: {x: 0.396, y: -0.029, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -14612,7 +14614,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1910601321}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.1249623, w: 0.99216145}
+  m_LocalRotation: {x: -0, y: -0, z: 0.16311997, w: 0.98660624}
   m_LocalPosition: {x: 0.352, y: -0.011, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -16103,7 +16105,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 8d6c52ade89692b4fb17b5a493b78591, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_AnimatePhysics: 0
@@ -16125,6 +16127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
+  animator: {fileID: 0}
   lantern: {fileID: 670782240}
   rake: {fileID: 1445690172}
   isMovementLocked: 0

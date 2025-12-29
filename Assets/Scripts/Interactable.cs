@@ -20,6 +20,7 @@ public class Interactable : MonoBehaviour
     {
         UIHandler.Instance.playerTipsText.text = "Wow I can touch it!";
     }
+  
     public void Interaction2()
     {
             if(GameManager.Instance.isDay)
