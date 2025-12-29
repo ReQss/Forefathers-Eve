@@ -27,6 +27,11 @@ public class GraveInteractable : Interactable
                     {
                         UIHandler.Instance.animationFramesClick.OpenTargetUI();
                         UIHandler.Instance.animationFramesClick.InitFrames(null);
+                        GameManager.Instance.questVariables.cleanedGrave += 1;
+                         if(resourceType != ResourceType.None)
+                        {
+                            UIHandler.Instance.RemoveResourceUI(resourceType);
+                        }
                     }
         
         interactionTip = interactionTipAfter;

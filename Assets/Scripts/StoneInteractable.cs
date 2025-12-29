@@ -22,7 +22,11 @@ public class StoneInteractable : Interactable
         if(Input.GetKeyDown(KeyCode.E))
         {
             this.gameObject.SetActive(false);
-            GameManager.Instance.collectedStone += 1;
+            GameManager.Instance.questVariables.collectedStone += 1;
+             if(resourceType != ResourceType.None)
+            {
+                UIHandler.Instance.RemoveResourceUI(resourceType);
+            }
         }
         
        UIHandler.Instance.playerTipsText.text = interactionTipAfter;

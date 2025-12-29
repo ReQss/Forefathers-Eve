@@ -4,6 +4,7 @@ public class Interactable : MonoBehaviour
 {
   
     public string interactionTip = "Hmm.... This looks interesting...";
+    public ResourceType resourceType;
 
     void Start()
     {

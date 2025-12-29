@@ -1,6 +1,29 @@
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using TMPro;
 using UnityEngine;
+public enum ResourceType
+{
+    None,
+    Wood,
+    Stone,
+    Grave,
+    Chapel
+}
+[System.Serializable]
+public class QuestResources
+{
+    [SerializeField]
+    public GameObject itemsPanel;
+    public ResourceType resourceType;
+    [SerializeField]
+    public List<GameObject> itemSlots;
+    [SerializeField]
+    private TextMeshProUGUI questTitle;
+    [SerializeField]
+    private string questDescription;
+
+}
 
 public class UIHandler : MonoBehaviour
 {
@@ -11,7 +34,10 @@ public class UIHandler : MonoBehaviour
     public TextMeshProUGUI playerTipsText;
 
     private float nextAdviceTime = 0f;
-
+    [SerializeField]
+    private List <QuestResources> questResources = new List<QuestResources>();
+     [SerializeField]
+    public TextMeshProUGUI panelText;
     public string[] tips = {
         "Remember to save your progress!",
         "Explore every corner for hidden secrets.",
@@ -27,7 +53,55 @@ public class UIHandler : MonoBehaviour
         else
             Destroy(gameObject);
     }
+    // public void ResetQuestResources()
+    // {
+    //     foreach(QuestResources qr in questResources)
+    //     {
+    //         foreach(GameObject item in qr.itemSlots)
+    //         {
+    //             item.SetActive(false);
+    //         }
+    //         // Reset each quest resource as needed
+    //     }
+    // }
+    
+     
+    public void RemoveResourceUI(ResourceType resourceType)
+    {
+        foreach (QuestResources qr in questResources)
+        {
+            if(qr.resourceType == resourceType)
+            {
+                int i = 0;
+                foreach(GameObject item in qr.itemSlots)
+                {
+                    if(item.activeSelf == false){
+                        i++;
+                        continue;
+                        }
+                    else
+                    {
+                        item.SetActive(false);
+                        if(i == qr.itemSlots.Count -1)
+                            qr.itemsPanel.SetActive(false);
+                        return;
+                    }
+                    
+                }
+            }
+        }
 
+    }
+    public void ResetAllResourceUI(){
+        foreach(QuestResources qr in questResources)
+        {
+            foreach(GameObject item in qr.itemSlots)
+            {
+                item.SetActive(true);
+            }
+            qr.itemsPanel.SetActive(true);
+        }
+    }
     void Start()
     {
         ScheduleNextAdvice();

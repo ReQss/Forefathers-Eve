@@ -16,13 +16,14 @@ public class WoodInteractable : Interactable
     }
     public override void Interaction()
     {
-    
-        
-        
         if(Input.GetKeyDown(KeyCode.E))
         {
             this.gameObject.SetActive(false);
-            GameManager.Instance.collectedWood += 1;
+            GameManager.Instance.questVariables.collectedWood += 1;
+            if(resourceType != ResourceType.None)
+            {
+                UIHandler.Instance.RemoveResourceUI(resourceType);
+            }
         }
         
        UIHandler.Instance.playerTipsText.text = interactionTipAfter;
