@@ -10951,13 +10951,13 @@ MonoBehaviour:
   isDay: 1
   saveZoneDialogues:
     dialogues:
-    - {fileID: 11400000, guid: 8adf91f0d596f4240b34b86dcf099702, type: 2}
+    - {fileID: 11400000, guid: 6fdf72dd1d37e054691f82544cfe7970, type: 2}
     - {fileID: 11400000, guid: 8adf91f0d596f4240b34b86dcf099702, type: 2}
     currentDialogueIndex: 0
   ritualZoneDialogues:
     dialogues:
     - {fileID: 11400000, guid: 8adf91f0d596f4240b34b86dcf099702, type: 2}
-    - {fileID: 11400000, guid: 8adf91f0d596f4240b34b86dcf099702, type: 2}
+    - {fileID: 11400000, guid: 9e2e812c5e70ef443b78efdf5cd49640, type: 2}
     currentDialogueIndex: 0
 --- !u!4 &1686778772
 Transform:
@@ -16574,6 +16574,7 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1686778772}
   - {fileID: 619394802}
   - {fileID: 968028010}
   - {fileID: 971001311}
@@ -16582,7 +16583,6 @@ SceneRoots:
   - {fileID: 1782749953}
   - {fileID: 1420824590}
   - {fileID: 562419190}
-  - {fileID: 1686778772}
   - {fileID: 1404889039}
   - {fileID: 1711402940}
   - {fileID: 718199243}
