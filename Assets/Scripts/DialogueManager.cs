@@ -1,5 +1,10 @@
 using UnityEngine;
-
+public enum DialogueAnswerCorrectness
+{
+    Neutral,
+    Correct,
+    Incorrect,
+}
 public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager Instance { get; private set; }
@@ -10,7 +15,9 @@ public class DialogueManager : MonoBehaviour
     private int currentLineIndex = 0;
     private bool isDialogueActive = false;
     public DialogueData startRitualMonologue;
-    private System.Action onDialogueEnd; // Dodaj to pole
+    private System.Action onDialogueEnd; 
+    public DialogueAnswerCorrectness answerCorrectness;
+    public EnemySpawner enemySpawner;
 
     void Awake()
     {
@@ -65,7 +72,7 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public void StartDialogue(DialogueData dialogue, System.Action onEnd = null)
+    public void StartDialogue(DialogueData dialogue, DialogueAnswerCorrectness answerCorrectness = DialogueAnswerCorrectness.Neutral, System.Action onEnd = null)
     {
         if (dialogue == null || dialogue.dialogueLines == null || dialogue.dialogueLines.Length == 0)
         {
@@ -77,6 +84,7 @@ public class DialogueManager : MonoBehaviour
         currentLineIndex = 0;
         isDialogueActive = true;
         onDialogueEnd = onEnd;
+        this.answerCorrectness = answerCorrectness;
 
         // Zatrzymaj ruch gracza podczas dialogu
         if (PlayerMovement.Instance != null)
@@ -168,6 +176,10 @@ public class DialogueManager : MonoBehaviour
         }
 
         PlayerMovement.Instance.animator.SetBool("RitualIdle",false);
+        if(answerCorrectness == DialogueAnswerCorrectness.Incorrect)
+        {
+            IncorrectChoice();
+        }
         // Wywołaj callback jeśli jest ustawiony
         if (onDialogueEnd != null)
         {
@@ -179,5 +191,12 @@ public class DialogueManager : MonoBehaviour
     public bool IsDialogueActive()
     {
         return isDialogueActive;
+    }
+    public void IncorrectChoice()
+    {
+        if(enemySpawner == null)return;
+        
+        Debug.Log("Incorrect choice made.");
+        enemySpawner.SpawnEnemy();
     }
 }

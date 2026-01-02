@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 public enum ResourceType
 {
     None,
@@ -39,6 +40,8 @@ public class UIHandler : MonoBehaviour
     private List <QuestResources> questResources = new List<QuestResources>();
      [SerializeField]
     public TextMeshProUGUI panelText;
+     public Image healthBarImage;
+
     public string[] tips = {
         "Remember to save your progress!",
         "Explore every corner for hidden secrets.",
@@ -65,7 +68,16 @@ public class UIHandler : MonoBehaviour
     //         // Reset each quest resource as needed
     //     }
     // }
-    
+     public void UpdateHealthBar()
+{
+    if (healthBarImage == null) return;
+
+    float fill = (float)PlayerMovement.Instance.currentHealth /
+                 PlayerMovement.Instance.maxHealth;
+
+    healthBarImage.fillAmount = Mathf.Clamp01(fill);
+}
+
      
     public void RemoveResourceUI(ResourceType resourceType)
     {

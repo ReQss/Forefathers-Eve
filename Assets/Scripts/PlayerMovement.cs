@@ -14,7 +14,8 @@ public class PlayerMovement : MonoBehaviour
     private bool isAttacking = true;
     public bool isMovementLocked = false;
     public AudioSource walkAudioSource;
-
+    public int maxHealth = 100;
+    public int currentHealth = 100;
     void Awake()
     {
         if (Instance == null) Instance = this;

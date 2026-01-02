@@ -96,7 +96,6 @@ public class GameManager : MonoBehaviour
             }
             else
             {
-                  Debug.Log("Night");
                 StartRirtualScene();
             }
            
@@ -105,11 +104,12 @@ public class GameManager : MonoBehaviour
     }
     public void StartRirtualScene()
     {
-        // Rozpocznij dialog i po jego zakończeniu przejdź do sceny
-        DialogueManager.Instance.StartDialogue(
-            DialogueManager.Instance.startRitualMonologue,
-            () => SceneManager.LoadScene("RitualScene")
-        );
+            // Rozpocznij dialog i po jego zakończeniu przejdź do sceny
+            DialogueManager.Instance.StartDialogue(
+        dialogue: DialogueManager.Instance.startRitualMonologue,
+        onEnd: () => SceneManager.LoadScene("RitualScene")
+    );
+
     }
 }
 
