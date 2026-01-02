@@ -9,6 +9,8 @@ public class InteractableChapel : Interactable
     {
         if(Input.GetKeyDown(KeyCode.E))
         {
+            PlayerMovement.Instance.isMovementLocked = true;
+            PlayerMovement.Instance.animator.SetBool("Interact",false);
             // this.gameObject.SetActive(false);
             GameManager.Instance.questVariables.prayedAtChapel = true;
             if(resourceType != ResourceType.None)

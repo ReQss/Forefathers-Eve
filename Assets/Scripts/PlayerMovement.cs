@@ -37,9 +37,9 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         if(isMovementLocked) return;
-         if (Input.GetKeyDown(KeyCode.E) )
+         if (Input.GetKeyDown(KeyCode.E) && animator.GetCurrentAnimatorClipInfo(0)[0].clip.name != "Pray")
         {
-            if (currentInteractable != null)
+            if (currentInteractable != null )
             {
                 animator.SetTrigger("Interact");
                 
