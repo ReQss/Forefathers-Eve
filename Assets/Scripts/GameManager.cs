@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 public class QuestVariables
 {
     public int collectedWood = 0;
@@ -62,6 +63,10 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Input.GetKeyDown(KeyCode.R))
+        {
+            StartRirtualScene();
+        }
         // Liczenie czasu od startu gry
         DayNightCycle();
     }
@@ -89,9 +94,22 @@ public class GameManager : MonoBehaviour
                 QuestManager.Instance.NextQuest();
                 ResetQuests();
             }
+            else
+            {
+                  Debug.Log("Night");
+                StartRirtualScene();
+            }
            
             elapsedTime = 0f;
         }
+    }
+    public void StartRirtualScene()
+    {
+        // Rozpocznij dialog i po jego zakończeniu przejdź do sceny
+        DialogueManager.Instance.StartDialogue(
+            DialogueManager.Instance.startRitualMonologue,
+            () => SceneManager.LoadScene("RitualScene")
+        );
     }
 }
 

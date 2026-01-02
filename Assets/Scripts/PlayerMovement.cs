@@ -25,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         // spriteRenderer = GetComponent<SpriteRenderer>();
-        animator = GetComponent<Animator>(); // Pobierz animator
+        animator = GetComponent<Animator>(); 
     }
 
     public void StopMovement()
@@ -48,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
             }
             else
             {
-                animator.SetTrigger("Attack"); // uruchom animację "Attack" tylko jeśli nie ma interakcji
+                animator.SetTrigger("Attack");
             }
         }
         // ruch
@@ -65,7 +65,6 @@ public class PlayerMovement : MonoBehaviour
             transform.localScale = new Vector3(-1, 1, 1);
 
 
-        // ustaw animację "Running" gdy idziemy w bok lub w górę
         if (animator != null)
             animator.SetBool("Running", input.magnitude > 0);
 

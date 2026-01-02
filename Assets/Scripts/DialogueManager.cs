@@ -9,6 +9,8 @@ public class DialogueManager : MonoBehaviour
     private DialogueData currentDialogue;
     private int currentLineIndex = 0;
     private bool isDialogueActive = false;
+    public DialogueData startRitualMonologue;
+    private System.Action onDialogueEnd; // Dodaj to pole
 
     void Awake()
     {
@@ -33,7 +35,7 @@ public class DialogueManager : MonoBehaviour
             }
         }
     }
-
+    
     void Update()
     {
         // Sprawdzanie inputu podczas dialogu
@@ -63,7 +65,7 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public void StartDialogue(DialogueData dialogue)
+    public void StartDialogue(DialogueData dialogue, System.Action onEnd = null)
     {
         if (dialogue == null || dialogue.dialogueLines == null || dialogue.dialogueLines.Length == 0)
         {
@@ -74,6 +76,7 @@ public class DialogueManager : MonoBehaviour
         currentDialogue = dialogue;
         currentLineIndex = 0;
         isDialogueActive = true;
+        onDialogueEnd = onEnd;
 
         // Zatrzymaj ruch gracza podczas dialogu
         if (PlayerMovement.Instance != null)
@@ -162,6 +165,14 @@ public class DialogueManager : MonoBehaviour
         if (dialogueUI != null)
         {
             dialogueUI.HideDialogueUI();
+        }
+
+        PlayerMovement.Instance.animator.SetBool("RitualIdle",false);
+        // Wywołaj callback jeśli jest ustawiony
+        if (onDialogueEnd != null)
+        {
+            onDialogueEnd.Invoke();
+            onDialogueEnd = null;
         }
     }
 

@@ -8,7 +8,8 @@ public enum ResourceType
     Wood,
     Stone,
     Grave,
-    Chapel
+    Chapel,
+    Fire
 }
 [System.Serializable]
 public class QuestResources
