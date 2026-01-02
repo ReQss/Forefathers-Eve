@@ -175,7 +175,11 @@ public class DialogueManager : MonoBehaviour
             dialogueUI.HideDialogueUI();
         }
 
-        PlayerMovement.Instance.animator.SetBool("RitualIdle",false);
+        if (PlayerMovement.Instance != null && PlayerMovement.Instance.animator != null)
+        {
+            PlayerMovement.Instance.animator.SetBool("RitualIdle", false);
+        }
+
         if(answerCorrectness == DialogueAnswerCorrectness.Incorrect)
         {
             IncorrectChoice();
