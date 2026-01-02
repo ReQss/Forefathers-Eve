@@ -3788,6 +3788,8 @@ MonoBehaviour:
   rake: {fileID: 0}
   isMovementLocked: 0
   walkAudioSource: {fileID: 0}
+  maxHealth: 100
+  currentHealth: 100
 --- !u!1 &566684146
 GameObject:
   m_ObjectHideFlags: 0
@@ -8970,6 +8972,7 @@ MonoBehaviour:
     questTitle: {fileID: 1494873165}
     questDescription: Collect 5 wood pieces.
   panelText: {fileID: 2063217495}
+  healthBarImage: {fileID: 0}
   tips:
   - Remember to save your progress!
   - Explore every corner for hidden secrets.
@@ -9227,7 +9230,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0}
     oldSize: {x: 8.53, y: 12.8}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
@@ -10946,6 +10949,16 @@ MonoBehaviour:
   health: 0
   elapsedTime: 0
   isDay: 1
+  saveZoneDialogues:
+    dialogues:
+    - {fileID: 11400000, guid: 8adf91f0d596f4240b34b86dcf099702, type: 2}
+    - {fileID: 11400000, guid: 8adf91f0d596f4240b34b86dcf099702, type: 2}
+    currentDialogueIndex: 0
+  ritualZoneDialogues:
+    dialogues:
+    - {fileID: 11400000, guid: 8adf91f0d596f4240b34b86dcf099702, type: 2}
+    - {fileID: 11400000, guid: 8adf91f0d596f4240b34b86dcf099702, type: 2}
+    currentDialogueIndex: 0
 --- !u!4 &1686778772
 Transform:
   m_ObjectHideFlags: 0
@@ -14783,6 +14796,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueUI: {fileID: 1445930826}
   startRitualMonologue: {fileID: 11400000, guid: 60a0e43ca1937d64ea59796c99911e35, type: 2}
+  answerCorrectness: 0
+  enemySpawner: {fileID: 0}
+  sceneDialogues:
+    dialogues: []
+    currentDialogueIndex: 0
+  zone: 0
 --- !u!4 &1953974036
 Transform:
   m_ObjectHideFlags: 0
@@ -16141,6 +16160,8 @@ MonoBehaviour:
   rake: {fileID: 1445690172}
   isMovementLocked: 0
   walkAudioSource: {fileID: 661266951}
+  maxHealth: 100
+  currentHealth: 100
 --- !u!50 &2137844060
 Rigidbody2D:
   serializedVersion: 5

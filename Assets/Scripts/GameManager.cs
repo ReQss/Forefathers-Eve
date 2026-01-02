@@ -1,5 +1,12 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+[System.Serializable]
+public class SceneDialogues
+{
+    public List<DialogueData> dialogues;
+    public int currentDialogueIndex = 0;
+}
 public class QuestVariables
 {
     public int collectedWood = 0;
@@ -15,6 +22,8 @@ public class GameManager : MonoBehaviour
     public float elapsedTime = 0f;
     public bool isDay = true;
     public QuestVariables questVariables = new QuestVariables();
+    public SceneDialogues saveZoneDialogues;
+    public SceneDialogues ritualZoneDialogues;
     void Awake()
     {
         if (Instance == null)

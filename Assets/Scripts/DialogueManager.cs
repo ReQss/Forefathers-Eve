@@ -1,4 +1,13 @@
+using System.Collections; // ✅ REQUIRED
+using System.Collections.Generic;
 using UnityEngine;
+[System.Serializable]
+public enum Zone
+{
+    SaveZone,
+    RitualZone,
+}
+[System.Serializable]
 public enum DialogueAnswerCorrectness
 {
     Neutral,
@@ -18,7 +27,8 @@ public class DialogueManager : MonoBehaviour
     private System.Action onDialogueEnd; 
     public DialogueAnswerCorrectness answerCorrectness;
     public EnemySpawner enemySpawner;
-
+    public SceneDialogues sceneDialogues;
+    public Zone zone;
     void Awake()
     {
         if (Instance == null)
@@ -41,6 +51,41 @@ public class DialogueManager : MonoBehaviour
                 Debug.LogError("DialogueUI nie został znaleziony! Dodaj DialogueUI do sceny.");
             }
         }
+        sceneDialogues = GetDialogueDataByZone();
+        StartCoroutine(LateStart());
+    }
+    public SceneDialogues GetDialogueDataByZone()
+    {
+        switch (zone)
+        {
+            case Zone.SaveZone:
+                return GameManager.Instance.saveZoneDialogues;
+            case Zone.RitualZone:
+                return GameManager.Instance.ritualZoneDialogues;
+            default:
+                return null;
+        }
+    }
+      public IEnumerator LateStart()
+    {
+        if(zone != Zone.SaveZone)yield return null;
+        
+        yield return new WaitForSeconds(2f);
+        if(zone == Zone.SaveZone)
+        {
+            StartDialogue(GetDialogue());
+        }
+        yield return null;   
+    }
+    public DialogueData GetDialogue()
+    {
+        if (sceneDialogues.currentDialogueIndex < sceneDialogues.dialogues.Count)
+        {
+            sceneDialogues.currentDialogueIndex++;
+            return sceneDialogues.dialogues[sceneDialogues.currentDialogueIndex - 1];
+
+        }
+        return null;
     }
     
     void Update()
@@ -79,7 +124,10 @@ public class DialogueManager : MonoBehaviour
             Debug.LogWarning("Próba rozpoczęcia pustego dialogu!");
             return;
         }
-
+        if(PlayerMovement.Instance != null)
+        {
+            PlayerMovement.Instance.animator.SetBool("Running",false);
+        }
         currentDialogue = dialogue;
         currentLineIndex = 0;
         isDialogueActive = true;

@@ -8,7 +8,8 @@ public class InteractableFire : Interactable
     {
         if(Input.GetKeyDown(KeyCode.E))
         {
-            DialogueManager.Instance.StartDialogue(dialogueData, DialogueAnswerCorrectness.Incorrect);
+            DialogueData givenDialogue= DialogueManager.Instance.GetDialogue();
+            DialogueManager.Instance.StartDialogue(givenDialogue, DialogueAnswerCorrectness.Incorrect);
 
             PlayerMovement.Instance.isMovementLocked = true;
             PlayerMovement.Instance.animator.SetBool("Interact",false);
