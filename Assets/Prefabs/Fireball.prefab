@@ -81,7 +81,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: -7650934776948445954, guid: c987495281d4e334cb2404eed512d633, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 2.71, y: 1.67}
@@ -105,7 +105,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -116,7 +116,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 6
+  m_Constraints: 0
 --- !u!114 &6384514045110951351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,8 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8346dece5c7057c459146dd80c3f4c32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 56.71
-  lifetime: 5
+  speed: 20
 --- !u!70 &1312606492561503168
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

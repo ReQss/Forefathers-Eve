@@ -49,7 +49,6 @@ public class HandFollowCursor : MonoBehaviour
     {
         handActive = isActive;
 
-        // Włącz/wyłącz widoczność sprite'ów
         handGraphicsRenderer.enabled = handActive;
         handWeaponRenderer.enabled = handActive;
         originalHandRenderer.enabled = !handActive;

@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     public int maxHealth = 100;
     public int currentHealth = 100;
     public HandFollowCursor additionalHand;
+    public bool flipX = false;
     
     void Awake()
     {
@@ -62,20 +63,8 @@ public class PlayerMovement : MonoBehaviour
 
         // flip
         // flip rigowanej postaci
-        if (additionalHand.handActive)
-        {
-            if (additionalHand.handTarget.position.x < transform.position.x)
-                transform.localScale = new Vector3(1, 1, 1);
-            else if (additionalHand.handTarget.position.x > transform.position.x)
-                transform.localScale = new Vector3(-1, 1, 1);
-        }
-        else
-        {
-            if (input.x < 0)
-                transform.localScale = new Vector3(1, 1, 1);
-            else if (input.x > 0)
-                transform.localScale = new Vector3(-1, 1, 1);
-        }
+        ChangePlayerDirection();
+        PlayerDirection();
 
         if (animator != null)
             animator.SetBool("Running", input.magnitude > 0);
@@ -96,6 +85,35 @@ public class PlayerMovement : MonoBehaviour
         }
 
        
+    }
+    public void ChangePlayerDirection()
+    {
+        if (additionalHand.handActive)
+        {
+            if (additionalHand.handTarget.position.x < transform.position.x){
+                flipX = false;
+            }
+            else if (additionalHand.handTarget.position.x > transform.position.x){
+                flipX = true;
+            }
+        }
+        else
+        {
+            if (input.x < 0){
+                flipX = false;
+            }
+            else if (input.x > 0){
+                flipX = true;
+            }
+        }
+    }
+    public void PlayerDirection()
+    {
+        if(flipX){
+            transform.localScale = new Vector3(-1, 1, 1);
+        } else {
+            transform.localScale = new Vector3(1, 1, 1);
+        }
     }
     public void SetLanternState(bool state)
     {
