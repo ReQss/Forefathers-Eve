@@ -82,6 +82,15 @@ public class DialogueManager : MonoBehaviour
         if (sceneDialogues.currentDialogueIndex < sceneDialogues.dialogues.Count)
         {
             sceneDialogues.currentDialogueIndex++;
+            switch (zone)
+            {
+                case Zone.SaveZone:
+                    GameManager.Instance.saveZoneDialogues = sceneDialogues;
+                    break;
+                case Zone.RitualZone:
+                    GameManager.Instance.ritualZoneDialogues = sceneDialogues;
+                    break;
+            }
             return sceneDialogues.dialogues[sceneDialogues.currentDialogueIndex - 1];
 
         }
