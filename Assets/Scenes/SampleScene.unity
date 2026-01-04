@@ -10954,11 +10954,11 @@ MonoBehaviour:
   saveZoneDialogues:
     dialogues:
     - {fileID: 11400000, guid: 6fdf72dd1d37e054691f82544cfe7970, type: 2}
-    - {fileID: 11400000, guid: 8adf91f0d596f4240b34b86dcf099702, type: 2}
+    - {fileID: 11400000, guid: ac29e47df227db74797f1706d6d1230b, type: 2}
     currentDialogueIndex: 0
   ritualZoneDialogues:
     dialogues:
-    - {fileID: 11400000, guid: 8adf91f0d596f4240b34b86dcf099702, type: 2}
+    - {fileID: 11400000, guid: ac29e47df227db74797f1706d6d1230b, type: 2}
     - {fileID: 11400000, guid: 9e2e812c5e70ef443b78efdf5cd49640, type: 2}
     currentDialogueIndex: 0
 --- !u!4 &1686778772
@@ -14797,7 +14797,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueUI: {fileID: 1445930826}
-  startRitualMonologue: {fileID: 11400000, guid: 60a0e43ca1937d64ea59796c99911e35, type: 2}
+  startRitualMonologue: {fileID: 11400000, guid: 5b97a2074266a0b41853f89f0d6dab6f, type: 2}
   answerCorrectness: 0
   enemySpawner: {fileID: 0}
   sceneDialogues:
