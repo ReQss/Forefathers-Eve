@@ -88,7 +88,7 @@ public class PlayerMovement : MonoBehaviour
     }
     public void ChangePlayerDirection()
     {
-        if (additionalHand.handActive)
+        if (additionalHand != null && additionalHand.handActive)
         {
             if (additionalHand.handTarget.position.x < transform.position.x){
                 flipX = false;

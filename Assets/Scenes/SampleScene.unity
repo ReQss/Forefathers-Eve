@@ -3790,6 +3790,8 @@ MonoBehaviour:
   walkAudioSource: {fileID: 0}
   maxHealth: 100
   currentHealth: 100
+  additionalHand: {fileID: 0}
+  flipX: 0
 --- !u!1 &566684146
 GameObject:
   m_ObjectHideFlags: 0
@@ -4514,7 +4516,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &670782241
 Transform:
   m_ObjectHideFlags: 0
@@ -9618,7 +9620,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1445690173
 Transform:
   m_ObjectHideFlags: 0
@@ -16162,6 +16164,8 @@ MonoBehaviour:
   walkAudioSource: {fileID: 661266951}
   maxHealth: 100
   currentHealth: 100
+  additionalHand: {fileID: 0}
+  flipX: 0
 --- !u!50 &2137844060
 Rigidbody2D:
   serializedVersion: 5
