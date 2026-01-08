@@ -58,26 +58,36 @@ public class UIHandler : MonoBehaviour
         else
             Destroy(gameObject);
     }
-    // public void ResetQuestResources()
-    // {
-    //     foreach(QuestResources qr in questResources)
-    //     {
-    //         foreach(GameObject item in qr.itemSlots)
-    //         {
-    //             item.SetActive(false);
-    //         }
-    //         // Reset each quest resource as needed
-    //     }
-    // }
-     public void UpdateHealthBar()
-{
-    if (healthBarImage == null) return;
 
-    float fill = (float)PlayerMovement.Instance.currentHealth /
-                 PlayerMovement.Instance.maxHealth;
 
-    healthBarImage.fillAmount = Mathf.Clamp01(fill);
-}
+    public void UpdateHealthBar()
+    {
+        if (healthBarImage == null) return;
+
+        float fill = (float)PlayerMovement.Instance.currentHealth /
+                    PlayerMovement.Instance.maxHealth;
+
+        healthBarImage.fillAmount = Mathf.Clamp01(fill);
+    }
+    public void StartUpdateHealthBar()
+    {
+        if (healthBarImage == null) return;
+
+        int currentHealthStart = 0;
+
+        if (!GameManager.Instance.questVariables.isEverythingAchieved)
+        {
+            currentHealthStart = PlayerMovement.Instance.maxHealth / 2;
+        }
+        else 
+        {
+            currentHealthStart = PlayerMovement.Instance.maxHealth;
+        }
+
+        float fill = (float)currentHealthStart / PlayerMovement.Instance.maxHealth;
+        healthBarImage.fillAmount = Mathf.Clamp01(fill);
+    }
+
 
      
     public void RemoveResourceUI(ResourceType resourceType)
@@ -119,6 +129,7 @@ public class UIHandler : MonoBehaviour
     void Start()
     {
         ScheduleNextAdvice();
+        StartUpdateHealthBar();
     }
 
     void Update()

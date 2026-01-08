@@ -3,6 +3,7 @@ using UnityEngine;
 public class InteractableChapel : Interactable
 {
      public string interactionTipAfter = "Praise the Lord!";
+     public DialogueData dialogueData;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
    
     public override void Interaction()
@@ -18,6 +19,8 @@ public class InteractableChapel : Interactable
                 UIHandler.Instance.RemoveResourceUI(resourceType);
                 PlayerMovement.Instance.animator.SetTrigger("Pray");
             }
+            
+            DialogueManager.Instance.StartDialogue(dialogueData);
         }
         
        UIHandler.Instance.playerTipsText.text = interactionTipAfter;

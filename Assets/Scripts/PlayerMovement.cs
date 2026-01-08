@@ -30,6 +30,10 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         // spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>(); 
+        if(GameManager.Instance.questVariables.isEverythingAchieved == false)
+        {
+            currentHealth = maxHealth/2;
+        }
     }
 
     public void StopMovement()
