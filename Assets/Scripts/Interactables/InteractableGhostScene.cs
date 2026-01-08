@@ -8,11 +8,7 @@ public class InteractableGhostScene : Interactable
     public override void Interaction()
     {
         // Sprawdź czy jest noc
-        if (GameManager.Instance.isDay)
-        {
-            UIHandler.Instance.ShowPlayerTip("It's still too soon..... The spirits only appear at night.");
-            return;
-        }
+
 
         // Sprawdź czy dialog jest już aktywny
         if (DialogueManager.Instance != null && DialogueManager.Instance.IsDialogueActive())

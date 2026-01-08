@@ -25,5 +25,21 @@ MonoBehaviour:
   - text: Hi...
     characterName: 
     characterPortrait: {fileID: 21300000, guid: 6be477f9100b8c0478ead771d7c1a79a, type: 3}
+  - text: Whats your purpose of staying here?
+    characterName: Mayor
+    characterPortrait: {fileID: 21300000, guid: 09b90f90b051f8e4eaafd32d657783bf, type: 3}
   ghostName: Duch
+  isMultipleChoice: 1
+  multipleChoice:
+    choiceDescription: What's your purpose of coming here?
+    choices:
+    - choiceText: I am here to take care of this old place..
+      correctness: 1
+      afterChoiceDialogue: {fileID: 11400000, guid: 4dfb542aec85c124fa43f688c48a9b08, type: 2}
+    - choiceText: Just looking around.. not sure yet
+      correctness: 0
+      afterChoiceDialogue: {fileID: 0}
+    - choiceText: To save poor souls and speak with the ghosts!
+      correctness: 2
+      afterChoiceDialogue: {fileID: 11400000, guid: 2efd98960e6e0c94eb744545b704a9d7, type: 2}
   defaultGhostPortrait: {fileID: 0}

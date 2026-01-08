@@ -21,15 +21,5 @@ public class Interactable : MonoBehaviour
         UIHandler.Instance.playerTipsText.text = "Wow I can touch it!";
     }
   
-    public void Interaction2()
-    {
-            if(GameManager.Instance.isDay)
-            {
-                UIHandler.Instance.playerTipsText.text = "It's still too soon.....";
-            }
-            else
-            {
-                UIHandler.Instance.playerTipsText.text = "It's dark, but I can make out some shapes.";
-            }
-    }
+
 }

@@ -41,6 +41,7 @@ public class UIHandler : MonoBehaviour
      [SerializeField]
     public TextMeshProUGUI panelText;
      public Image healthBarImage;
+     public GraveyardHandler graveyardHandler;
 
     public string[] tips = {
         "Remember to save your progress!",
@@ -122,8 +123,9 @@ public class UIHandler : MonoBehaviour
 
     void Update()
     {
+        if(graveyardHandler == null) return;
         // Liczenie czasu
-        float percentOfDay = GameManager.Instance.elapsedTime / 60f;
+        float percentOfDay = graveyardHandler.elapsedTime / 60f;
         int hours = (int)(percentOfDay * 24f);
         int minutes = (int)((percentOfDay * 24f - hours) * 60f);
         dayTimer.text = $"{hours:00}:{minutes:00}";

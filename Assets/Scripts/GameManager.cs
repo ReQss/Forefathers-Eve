@@ -19,11 +19,13 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
     public int health;
-    public float elapsedTime = 0f;
-    public bool isDay = true;
     public QuestVariables questVariables = new QuestVariables();
     public SceneDialogues saveZoneDialogues;
     public SceneDialogues ritualZoneDialogues;
+    public int ghostGoodChoices = 0;
+    public int ghostBadChoices = 0;
+    public int cityGoodChoices = 0;
+    public int cityBadChoices = 0;
     void Awake()
     {
         if (Instance == null)
@@ -52,17 +54,7 @@ public class GameManager : MonoBehaviour
             questVariables.isEverythingAchieved = false;
         }
     }
-    public void ResetQuests()
-    {
-        UIHandler.Instance.panelText.text = "ToDo!";
 
-        questVariables.collectedWood = 0;
-        questVariables.collectedStone = 0;
-        questVariables.cleanedGrave = 0;
-        questVariables.prayedAtChapel = false;
-        questVariables.isEverythingAchieved = false;
-        UIHandler.Instance.ResetAllResourceUI();
-    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -77,40 +69,8 @@ public class GameManager : MonoBehaviour
             StartRirtualScene();
         }
         // Liczenie czasu od startu gry
-        DayNightCycle();
     }
-    public void DayNightCycle(){
-        
-        elapsedTime += Time.deltaTime;
-        if (elapsedTime>=40f)
-        {
-            if (isDay)
-            {
-                 PlayerMovement.Instance.SetLanternState(true); 
-                PlayerMovement.Instance.SetRakeState(false);
-            }
-            else 
-            {
-                 PlayerMovement.Instance.SetLanternState(false); 
-                PlayerMovement.Instance.SetRakeState(true);
-            }
-        }
-       
-        if(elapsedTime >= 59f){
-            isDay = !isDay;
-            if (isDay)
-            {
-                QuestManager.Instance.NextQuest();
-                ResetQuests();
-            }
-            else
-            {
-                StartRirtualScene();
-            }
-           
-            elapsedTime = 0f;
-        }
-    }
+
     public void StartRirtualScene()
     {
             // Rozpocznij dialog i po jego zakończeniu przejdź do sceny
@@ -118,7 +78,14 @@ public class GameManager : MonoBehaviour
         dialogue: DialogueManager.Instance.startRitualMonologue,
         onEnd: () => SceneManager.LoadScene("RitualScene")
     );
-
+    }
+    public void StartGraveyardScene()
+    {
+            // Rozpocznij dialog i po jego zakończeniu przejdź do sceny
+            DialogueManager.Instance.StartDialogue(
+        dialogue: DialogueManager.Instance.startGraveyardMonologue,
+        onEnd: () => SceneManager.LoadScene("SampleScene")
+    );
     }
 }
 

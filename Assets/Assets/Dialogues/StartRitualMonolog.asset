@@ -17,4 +17,13 @@ MonoBehaviour:
     characterName: You
     characterPortrait: {fileID: 0}
   ghostName: 
+  multipleChoice:
+    choiceDescription: jestes zly?
+    choices:
+    - choiceText: jestes dobry
+      isCorrect: 0
+    - choiceText: jestes zly
+      isCorrect: 0
+    - choiceText: jestes bardzo zly
+      isCorrect: 0
   defaultGhostPortrait: {fileID: 0}

@@ -1,11 +1,15 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections.Generic;
 
 public class DialogueUI : MonoBehaviour
 {
     [Header("UI Elements")]
     [SerializeField] private GameObject dialoguePanel; // Główny panel dialogu
+    [SerializeField] private GameObject multipleChoice;
+    [SerializeField] private TextMeshProUGUI multipleChoiceQuestionText; // Tekst pytania w wyborze wielokrotnym
+    [SerializeField] private List<TextMeshProUGUI> choiceTexts; 
     [SerializeField] private TextMeshProUGUI dialogueText; // Tekst dialogu
     [SerializeField] private TextMeshProUGUI characterNameText; // Imię postaci
     [SerializeField] private Image characterPortraitImage; // Obraz postaci po lewej stronie
@@ -25,6 +29,69 @@ public class DialogueUI : MonoBehaviour
             dialoguePanel.SetActive(false);
         }
     }
+    public void HideMultipleChoiceUI()
+    {
+        if (multipleChoice != null)
+        {
+            multipleChoice.SetActive(false);
+        }
+    }
+public void SetMultipleChoiceUI()
+    {
+        if (multipleChoice == null) return;
+        if (DialogueManager.Instance == null) return;
+        if (DialogueManager.Instance.currentDialogue == null) return;
+
+        DialogueMultipleChoice dialogueMC =
+            DialogueManager.Instance.currentDialogue.multipleChoice;
+
+        if (dialogueMC == null) return;
+
+        // Ustaw pytanie
+        if (multipleChoiceQuestionText != null)
+        {
+            multipleChoiceQuestionText.text = dialogueMC.choiceDescription;
+        }
+
+        // Ustal ile opcji faktycznie mamy
+        int count = Mathf.Min(choiceTexts.Count, dialogueMC.choices.Count);
+
+        // Ustaw widoczne opcje
+        for (int i = 0; i < count; i++)
+        {
+            var choice = dialogueMC.choices[i];
+            if (choice == null) continue;
+
+            choiceTexts[i].text = choice.choiceText;
+
+            ChoiceButton choiceButton =
+                choiceTexts[i].transform.parent.GetComponent<ChoiceButton>();
+
+            if (choiceButton != null)
+            {
+                choiceButton.isCorrect = choice.correctness;
+            }
+            choiceButton.choiceDialogue = choice.afterChoiceDialogue;
+            choiceTexts[i].transform.parent.gameObject.SetActive(true);
+        }
+
+        // Ukryj nadmiarowe przyciski UI
+        for (int i = count; i < choiceTexts.Count; i++)
+        {
+            choiceTexts[i].transform.parent.gameObject.SetActive(false);
+        }
+
+        // Przełącz UI
+        switchActiveMultipleChoiceUI();
+    }
+public void switchActiveMultipleChoiceUI()
+    {
+        if (multipleChoice != null)
+        {
+            multipleChoice.SetActive(!multipleChoice.activeSelf);
+        }
+    }
+
 
     public void ShowDialogueUI()
     {

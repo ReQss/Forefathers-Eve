@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d648cd2f634e7f84ab5173ca253cbecf, type: 3}
+  m_Name: 0Bad
+  m_EditorClassIdentifier: 
+  dialogueLines:
+  - text: That's... Ridiculous.. You know ghosts are not real are you? We will look
+      at your hands..
+    characterName: 
+    characterPortrait: {fileID: 21300000, guid: 09b90f90b051f8e4eaafd32d657783bf, type: 3}
+  ghostName: Duch
+  multipleChoice:
+    choiceDescription: 
+    choices: []
+  defaultGhostPortrait: {fileID: 0}

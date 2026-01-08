@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d648cd2f634e7f84ab5173ca253cbecf, type: 3}
-  m_Name: FirstGhost11
+  m_Name: 1Ghost
   m_EditorClassIdentifier: 
   dialogueLines:
   - text: blabla
@@ -23,4 +23,17 @@ MonoBehaviour:
     characterName: Ghost
     characterPortrait: {fileID: 21300000, guid: cb6fd9c48f20ba24b9d5dc7e33d7a056, type: 3}
   ghostName: Duch
+  isMultipleChoice: 1
+  multipleChoice:
+    choiceDescription: Will you spare some coin?
+    choices:
+    - choiceText: Here you go..
+      correctness: 1
+      afterChoiceDialogue: {fileID: 11400000, guid: c7c4858b51aea38459a29231d43a2a8b, type: 2}
+    - choiceText: Go find them yourself!
+      correctness: 2
+      afterChoiceDialogue: {fileID: 11400000, guid: 601eaa234f12e7f4fb75740ab51c7079, type: 2}
+    - choiceText: I dont have any coins..
+      correctness: 0
+      afterChoiceDialogue: {fileID: 0}
   defaultGhostPortrait: {fileID: 0}

@@ -13,6 +13,7 @@ public enum DialogueAnswerCorrectness
     Neutral,
     Correct,
     Incorrect,
+    NoAnswer
 }
 public class DialogueManager : MonoBehaviour
 {
@@ -20,10 +21,11 @@ public class DialogueManager : MonoBehaviour
 
     [SerializeField] private DialogueUI dialogueUI;
     
-    private DialogueData currentDialogue;
+    public DialogueData currentDialogue;
     private int currentLineIndex = 0;
     private bool isDialogueActive = false;
     public DialogueData startRitualMonologue;
+    public DialogueData startGraveyardMonologue;
     private System.Action onDialogueEnd; 
     public DialogueAnswerCorrectness answerCorrectness;
     public EnemySpawner enemySpawner;
@@ -126,7 +128,7 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public void StartDialogue(DialogueData dialogue, DialogueAnswerCorrectness answerCorrectness = DialogueAnswerCorrectness.Neutral, System.Action onEnd = null)
+    public void StartDialogue(DialogueData dialogue, DialogueAnswerCorrectness answerCorrectness = DialogueAnswerCorrectness.NoAnswer, System.Action onEnd = null)
     {
         if (dialogue == null || dialogue.dialogueLines == null || dialogue.dialogueLines.Length == 0)
         {
@@ -200,6 +202,10 @@ public class DialogueManager : MonoBehaviour
 
         if (currentLineIndex >= currentDialogue.dialogueLines.Length)
         {
+            if (currentDialogue.multipleChoice.choices != null && currentDialogue.isMultipleChoice)
+            {
+                dialogueUI.SetMultipleChoiceUI();
+            }
             EndDialogue();
         }
         else
@@ -236,11 +242,44 @@ public class DialogueManager : MonoBehaviour
         {
             PlayerMovement.Instance.animator.SetBool("RitualIdle", false);
         }
-
-        if(answerCorrectness == DialogueAnswerCorrectness.Incorrect)
+        switch (answerCorrectness)
         {
-            IncorrectChoice();
+            case DialogueAnswerCorrectness.Correct:
+                if(zone == Zone.RitualZone)
+                {
+                    if(GameManager.Instance != null)
+                    {
+                        GameManager.Instance.ghostGoodChoices++;
+                    }
+                }
+                else if(zone == Zone.SaveZone)
+                {
+                    if(GameManager.Instance != null)
+                    {
+                        GameManager.Instance.cityGoodChoices++;
+                    }
+                }
+                break;
+            case DialogueAnswerCorrectness.Incorrect:
+                if(zone == Zone.RitualZone)
+                {
+                    if(GameManager.Instance != null)
+                    {
+                        GameManager.Instance.ghostBadChoices++;
+                        IncorrectChoice();
+                    }
+                }
+                else if(zone == Zone.SaveZone)
+                {
+                    if(GameManager.Instance != null)
+                    {
+                        GameManager.Instance.cityBadChoices++;
+                    }
+                }
+                break;
         }
+
+
         // Wywołaj callback jeśli jest ustawiony
         if (onDialogueEnd != null)
         {
