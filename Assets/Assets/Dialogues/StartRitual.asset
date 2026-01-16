@@ -19,5 +19,9 @@ MonoBehaviour:
   - text: I should start ritual already...
     characterName: You
     characterPortrait: {fileID: 21300000, guid: 6be477f9100b8c0478ead771d7c1a79a, type: 3}
-  ghostName: Duch
+  ghostName: You
+  isMultipleChoice: 0
+  multipleChoice:
+    choiceDescription: 
+    choices: []
   defaultGhostPortrait: {fileID: 0}
