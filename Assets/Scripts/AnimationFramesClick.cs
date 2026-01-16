@@ -20,17 +20,18 @@ public class AnimationFramesClick : MonoBehaviour
     public bool isRewardFrames = false;
     private bool isOpened = false;
     public bool isWebFrames = false;
-
+    private GraveInteractable currentGraveInteractable;
     void Start()
     {
         // Instance = this;
         targetAnimator.speed = 0;
         SetFrame(currentFrame);
     }
-    public void InitFrames(Action collectReward)
+    public void InitFrames(Action collectReward, GraveInteractable graveInteractable)
     {
         if (isOpened) return;
         isOpened = true;
+        currentGraveInteractable = graveInteractable;
         OpenTargetUI();
         if (collectReward != null)
             collectRewardAction = collectReward;
@@ -38,7 +39,7 @@ public class AnimationFramesClick : MonoBehaviour
         currentFrame = 0;
         SetFrame(currentFrame);
         StartAutoReverse();
-        PlayerMovement.Instance.isMovementLocked = true;
+        PlayerMovement.Instance.isMovementLocked2 = true;
     }
     public void OpenTargetUI()
     {
@@ -55,8 +56,9 @@ public class AnimationFramesClick : MonoBehaviour
             // await PlayerMovement.playerMovementInstance.FreeTimeFromWeb();
             // await PlayerMovement.playerMovementInstance.SlowPlayer();
         }
-
-        PlayerMovement.Instance.isMovementLocked = false;
+        currentGraveInteractable.ChangeGraveSprite();
+        currentGraveInteractable = null;
+        PlayerMovement.Instance.isMovementLocked2 = false;
     }
     public void NextFrame()
     {
@@ -73,6 +75,7 @@ public class AnimationFramesClick : MonoBehaviour
             if (isRewardFrames)
                 _ = GetReward();
         }
+        
     }
     public async Task GetReward()
     {

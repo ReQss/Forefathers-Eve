@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 4058254eece639b48a87c9db767f67da
+guid: 0bd3375d2fa4397429163d52d35edc90
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4123315961063649203
-    second: "Gr\xF3b-1 (1)_0"
+      213: 8159624486546682432
+    second: Minigame 1 grave_0
+  - first:
+      213: 8186706683759041450
+    second: Minigame 1 grave_1
+  - first:
+      213: 8101338507970245411
+    second: Minigame 1 grave_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,12 +52,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 700
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,23 +119,67 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "Gr\xF3b-1 (1)_0"
+      name: Minigame 1 grave_0
       rect:
         serializedVersion: 2
-        x: 319
-        y: 372
-        width: 1252
-        height: 1253
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 189
+        y: 888
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3bfa5e33506f83930800000000000000
-      internalID: 4123315961063649203
+      spriteID: 042b13d2d3fcc3170800000000000000
+      internalID: 8159624486546682432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minigame 1 grave_1
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 44
+        width: 480
+        height: 831
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aab16c59a560d9170800000000000000
+      internalID: 8186706683759041450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minigame 1 grave_2
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 402
+        width: 6
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32372c4437cbd6070800000000000000
+      internalID: 8101338507970245411
       vertices: []
       indices: 
       edges: []
@@ -138,7 +188,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: ee5eb56cea41b6747858697ba8daf138
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +198,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "Gr\xF3b-1 (1)_0": 4123315961063649203
+      Minigame 1 grave_0: 8159624486546682432
+      Minigame 1 grave_1: 8186706683759041450
+      Minigame 1 grave_2: 8101338507970245411
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

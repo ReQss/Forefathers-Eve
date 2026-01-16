@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     public int currentHealth = 100;
     public HandFollowCursor additionalHand;
     public bool flipX = false;
+    public bool isMovementLocked2 = false;
     
     void Awake()
     {
@@ -44,7 +45,11 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
-        if(isMovementLocked) return;
+        if(isMovementLocked || isMovementLocked2){ 
+            animator.SetBool("Running", false);
+            
+            return;
+        }
          if (Input.GetKeyDown(KeyCode.E) && animator.GetCurrentAnimatorClipInfo(0)[0].clip.name != "Pray")
         {
             if (currentInteractable != null )
@@ -70,7 +75,7 @@ public class PlayerMovement : MonoBehaviour
         ChangePlayerDirection();
         PlayerDirection();
 
-        if (animator != null)
+        if (animator != null && isMovementLocked == false && isMovementLocked2 == false)
             animator.SetBool("Running", input.magnitude > 0);
 
         // Footsteps sound
@@ -132,7 +137,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if(isMovementLocked) return;
+        if(isMovementLocked || isMovementLocked2) return;
         rb.MovePosition(rb.position + input * speed * Time.fixedDeltaTime);
     }
 

@@ -99,18 +99,9 @@ public class DialogueManager : MonoBehaviour
         return null;
     }
     
-    void Update()
+    public void NextDialogue()
     {
-        // Sprawdzanie inputu podczas dialogu
-        if (isDialogueActive)
-        {
-            // Spacje, Enter lub kliknięcie myszy
-            if (Input.GetKeyDown(KeyCode.Space) || 
-                Input.GetKeyDown(KeyCode.Return) || 
-                Input.GetKeyDown(KeyCode.Mouse0))
-            {
-                // Jeśli tekst się pisze, zakończ pisanie, w przeciwnym razie przejdź do następnej linii
-                if (dialogueUI != null && dialogueUI.IsTyping())
+            if (dialogueUI != null && dialogueUI.IsTyping())
                 {
                     dialogueUI.CompleteTyping();
                 }
@@ -118,14 +109,6 @@ public class DialogueManager : MonoBehaviour
                 {
                     NextLine();
                 }
-            }
-
-            // Escape zamyka dialog
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                EndDialogue();
-            }
-        }
     }
 
     public void StartDialogue(DialogueData dialogue, DialogueAnswerCorrectness answerCorrectness = DialogueAnswerCorrectness.NoAnswer, System.Action onEnd = null)

@@ -42,6 +42,7 @@ public class UIHandler : MonoBehaviour
     public TextMeshProUGUI panelText;
      public Image healthBarImage;
      public GraveyardHandler graveyardHandler;
+     public GameObject pauseMenu;
 
     public string[] tips = {
         "Remember to save your progress!",
@@ -134,21 +135,36 @@ public class UIHandler : MonoBehaviour
 
     void Update()
     {
-        if(graveyardHandler == null) return;
-        // Liczenie czasu
-        float percentOfDay = graveyardHandler.elapsedTime / 60f;
-        int hours = (int)(percentOfDay * 24f);
-        int minutes = (int)((percentOfDay * 24f - hours) * 60f);
-        dayTimer.text = $"{hours:00}:{minutes:00}";
-
-        // Losowy tip co 15–30s
-        if (Time.time >= nextAdviceTime)
+        if(Input.GetKeyDown(KeyCode.Escape))
         {
-            _ = AsyncShowTemporaryTip();
-            ScheduleNextAdvice();
+            PauseTheGame();
+        }
+        if(graveyardHandler != null){
+        // Liczenie czasu
+            float percentOfDay = graveyardHandler.elapsedTime / 60f;
+            int hours = (int)(percentOfDay * 24f);
+            int minutes = (int)((percentOfDay * 24f - hours) * 60f);
+            dayTimer.text = $"{hours:00}:{minutes:00}";
+
+            // Losowy tip co 15–30s
+            if (Time.time >= nextAdviceTime)
+            {
+                _ = AsyncShowTemporaryTip();
+                ScheduleNextAdvice();
+            }
         }
     }
-
+    public void PauseTheGame()
+    {
+        Debug.Log("Game Paused");
+        Time.timeScale = 0f;
+        pauseMenu.SetActive(true);
+    }
+    public void ResumeGame()
+    {
+        Time.timeScale = 1f;
+        pauseMenu.SetActive(false);
+    } 
     private void ScheduleNextAdvice()
     {
         nextAdviceTime = Time.time + Random.Range(15f, 30f);

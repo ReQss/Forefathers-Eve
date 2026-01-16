@@ -5,6 +5,7 @@ public class GraveInteractable : Interactable
 {
     private bool wasInteracted = false;
     public string interactionTipAfter = "The grave looks like new now!";
+    public Sprite cleanedGraveSprite;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     // string interactionTip = "This grave looks like it needs some cleaning... Press E to interact.";
     void Start()
@@ -26,18 +27,24 @@ public class GraveInteractable : Interactable
         if(Input.GetKeyDown(KeyCode.E))
                     {
                         UIHandler.Instance.animationFramesClick.OpenTargetUI();
-                        UIHandler.Instance.animationFramesClick.InitFrames(null);
+                        UIHandler.Instance.animationFramesClick.InitFrames(null,this);
                         GameManager.Instance.questVariables.cleanedGrave += 1;
                          if(resourceType != ResourceType.None)
                         {
                                 gameObject.tag = "Untagged";
-
                             UIHandler.Instance.RemoveResourceUI(resourceType);
                         }
                     }
         
         interactionTip = interactionTipAfter;
        UIHandler.Instance.playerTipsText.text = interactionTip;
+    }
+    public void ChangeGraveSprite()
+    {
+        if(cleanedGraveSprite != null)
+        {
+            GetComponent<SpriteRenderer>().sprite = cleanedGraveSprite;
+        }
     }
    
   

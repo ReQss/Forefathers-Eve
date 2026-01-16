@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1246669073043753590}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.32, y: -0.02, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4123315961063649203, guid: 4058254eece639b48a87c9db767f67da, type: 3}
+  m_Sprite: {fileID: -4608690251157740595, guid: e7f962b048bc91c4f93b88586db98aa0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -138,4 +138,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionTip: '"This grave looks like it needs some cleaning... Press E to interact.'
+  resourceType: 3
   interactionTipAfter: The grave looks like new now!
+  cleanedGraveSprite: {fileID: 4123315961063649203, guid: 4058254eece639b48a87c9db767f67da, type: 3}
