@@ -84,7 +84,7 @@ public class GameManager : MonoBehaviour
             // Rozpocznij dialog i po jego zakończeniu przejdź do sceny
             DialogueManager.Instance.StartDialogue(
         dialogue: DialogueManager.Instance.startGraveyardMonologue,
-        onEnd: () => SceneManager.LoadScene("SampleScene")
+        onEnd: () => SceneManager.LoadScene("Game")
     );
     }
 }

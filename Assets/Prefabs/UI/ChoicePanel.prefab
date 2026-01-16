@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4496449331153003880}
   - component: {fileID: 7883442510123892964}
   - component: {fileID: 6740933129658688907}
+  - component: {fileID: 2922871031764393334}
   m_Layer: 5
   m_Name: ButtonChoice (2)
   m_TagString: Untagged
@@ -35,9 +36,9 @@ RectTransform:
   - {fileID: 7497392462148631951}
   m_Father: {fileID: 7562234461226802772}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 514.2065, y: -529.39}
   m_SizeDelta: {x: 800, y: 187.756}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5208703844189731602
@@ -97,7 +98,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 3
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -149,6 +150,28 @@ MonoBehaviour:
   isCorrect: 0
   dialogueUI: {fileID: 0}
   choiceDialogue: {fileID: 0}
+--- !u!95 &2922871031764393334
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326073079810506106}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 682dfc2689a88d94cb0a2254900b07c6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1177993499269609321
 GameObject:
   m_ObjectHideFlags: 0
@@ -187,7 +210,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -175}
+  m_AnchoredPosition: {x: 0, y: -79.99989}
   m_SizeDelta: {x: 1028.413, y: 574.468}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5274561145908847450
@@ -289,7 +312,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 2428.8, y: 334.85}
+  m_SizeDelta: {x: 2159.2, y: 334.85}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4445007676195775652
 CanvasRenderer:
@@ -319,7 +342,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Are you sure?Are you sure?Are you sure?Are you sure?
+  m_text: Are you sure?Are you sure?AAre you sure?Are you sure?A
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5500a9ead03847d42a25ff33a19557db, type: 2}
   m_sharedMaterial: {fileID: 9084901555241547368, guid: 5500a9ead03847d42a25ff33a19557db, type: 2}
@@ -346,15 +369,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 175
-  m_fontSizeBase: 175
+  m_fontSize: 150
+  m_fontSizeBase: 150
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 1024
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -407,7 +430,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6852943669300780546
 RectTransform:
   m_ObjectHideFlags: 0
@@ -481,6 +504,7 @@ GameObject:
   - component: {fileID: 1522885526831372578}
   - component: {fileID: 6665630717178109444}
   - component: {fileID: 4283927201339410514}
+  - component: {fileID: 177763823080080336}
   m_Layer: 5
   m_Name: ButtonChoice
   m_TagString: Untagged
@@ -498,14 +522,14 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4890235530316362239}
   m_Father: {fileID: 7562234461226802772}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 514.2065, y: -93.878}
   m_SizeDelta: {x: 800, y: 187.756}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5760086415030111013
@@ -565,7 +589,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 3
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -617,6 +641,28 @@ MonoBehaviour:
   isCorrect: 2
   dialogueUI: {fileID: 0}
   choiceDialogue: {fileID: 0}
+--- !u!95 &177763823080080336
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3864186462952119718}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 682dfc2689a88d94cb0a2254900b07c6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3902494772856517968
 GameObject:
   m_ObjectHideFlags: 0
@@ -767,6 +813,7 @@ GameObject:
   - component: {fileID: 1005743355125119359}
   - component: {fileID: 2343940351938143097}
   - component: {fileID: 8563630257101489469}
+  - component: {fileID: 3735859186907722661}
   m_Layer: 5
   m_Name: ButtonChoice (1)
   m_TagString: Untagged
@@ -789,9 +836,9 @@ RectTransform:
   - {fileID: 7605411179781161613}
   m_Father: {fileID: 7562234461226802772}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 514.2065, y: -311.634}
   m_SizeDelta: {x: 800, y: 187.756}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4786042849014351965
@@ -851,7 +898,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 3
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -903,6 +950,28 @@ MonoBehaviour:
   isCorrect: 0
   dialogueUI: {fileID: 0}
   choiceDialogue: {fileID: 0}
+--- !u!95 &3735859186907722661
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4564820581951928847}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 682dfc2689a88d94cb0a2254900b07c6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6666991397732018264
 GameObject:
   m_ObjectHideFlags: 0
@@ -1051,6 +1120,7 @@ GameObject:
   - component: {fileID: 7191141047726620487}
   - component: {fileID: 5461799339873949694}
   - component: {fileID: 5506890536929028745}
+  - component: {fileID: 6102862031279630086}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -1068,14 +1138,14 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5102284802096240524}
   m_Father: {fileID: 6852943669300780546}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -316}
+  m_AnchoredPosition: {x: 0, y: -262}
   m_SizeDelta: {x: 2159.241, y: 334.854}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5461799339873949694
@@ -1116,6 +1186,28 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!95 &6102862031279630086
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6981288037058018589}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 73405a95bef46b34aa0101593b6303f3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8337149090127238624
 GameObject:
   m_ObjectHideFlags: 0

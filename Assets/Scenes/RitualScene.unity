@@ -17605,62 +17605,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ChoicePanel
       objectReference: {fileID: 0}
-    - target: {fileID: 1748882023329048034, guid: 0ca5feec60c13904ca3cad9d5a60f3e4, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2058402077057848662, guid: 0ca5feec60c13904ca3cad9d5a60f3e4, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2058402077057848662, guid: 0ca5feec60c13904ca3cad9d5a60f3e4, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2058402077057848662, guid: 0ca5feec60c13904ca3cad9d5a60f3e4, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 514.2065
-      objectReference: {fileID: 0}
-    - target: {fileID: 2058402077057848662, guid: 0ca5feec60c13904ca3cad9d5a60f3e4, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -529.39
-      objectReference: {fileID: 0}
-    - target: {fileID: 3406748796136208041, guid: 0ca5feec60c13904ca3cad9d5a60f3e4, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3406748796136208041, guid: 0ca5feec60c13904ca3cad9d5a60f3e4, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3406748796136208041, guid: 0ca5feec60c13904ca3cad9d5a60f3e4, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 514.2065
-      objectReference: {fileID: 0}
-    - target: {fileID: 3406748796136208041, guid: 0ca5feec60c13904ca3cad9d5a60f3e4, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -93.878
-      objectReference: {fileID: 0}
     - target: {fileID: 4283927201339410514, guid: 0ca5feec60c13904ca3cad9d5a60f3e4, type: 3}
       propertyPath: dialogueUI
       value: 
       objectReference: {fileID: 1445930826}
-    - target: {fileID: 6294254657350974983, guid: 0ca5feec60c13904ca3cad9d5a60f3e4, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6294254657350974983, guid: 0ca5feec60c13904ca3cad9d5a60f3e4, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6294254657350974983, guid: 0ca5feec60c13904ca3cad9d5a60f3e4, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 514.2065
-      objectReference: {fileID: 0}
-    - target: {fileID: 6294254657350974983, guid: 0ca5feec60c13904ca3cad9d5a60f3e4, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -311.634
-      objectReference: {fileID: 0}
     - target: {fileID: 6740933129658688907, guid: 0ca5feec60c13904ca3cad9d5a60f3e4, type: 3}
       propertyPath: dialogueUI
       value: 
