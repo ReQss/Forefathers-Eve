@@ -20,7 +20,7 @@ public class InteractableFire : Interactable
                     firstInteraction = true;
                     this.gameObject.GetComponent<Animator>().SetTrigger("startFire");
                 }
-                DialogueManager.Instance.StartDialogue(dialogueData);
+                DialogueManager.Instance.StartDialogue(DialogueManager.Instance.GetDialogue());
                 PlayerMovement.Instance.isMovementLocked = true;
                 PlayerMovement.Instance.animator.SetBool("Interact",false);
                 PlayerMovement.Instance.animator.SetBool("RitualIdle",true);

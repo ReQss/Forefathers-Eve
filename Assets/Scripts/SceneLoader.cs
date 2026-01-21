@@ -12,4 +12,7 @@ public class SceneLoader : MonoBehaviour
     public void ExitGame(){
         Application.Quit();
     }
+    public void ToggleGameObject(GameObject obj){
+        obj.SetActive(!obj.activeSelf);
+    }
 }

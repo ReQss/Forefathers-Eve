@@ -7,6 +7,7 @@ public class SceneDialogues
     public List<DialogueData> dialogues;
     public int currentDialogueIndex = 0;
 }
+[System.Serializable]
 public class QuestVariables
 {
     public int collectedWood = 0;
@@ -26,6 +27,8 @@ public class GameManager : MonoBehaviour
     public int ghostBadChoices = 0;
     public int cityGoodChoices = 0;
     public int cityBadChoices = 0;
+    public int collectedwoodAndStoneRequired = 4;
+    public int requiredCleanedGraves = 2;
     void Awake()
     {
         if (Instance == null)
@@ -40,13 +43,13 @@ public class GameManager : MonoBehaviour
     }
     public void CheckQuests()
     {
-        if (questVariables.collectedWood >= 5 &&
-            questVariables.collectedStone >= 5 &&
-            questVariables.cleanedGrave >= 4 &&
+        if (questVariables.collectedWood >= GameManager.Instance.collectedwoodAndStoneRequired &&
+            questVariables.collectedStone >= GameManager.Instance.collectedwoodAndStoneRequired &&
+            questVariables.cleanedGrave >= GameManager.Instance.requiredCleanedGraves &&
             questVariables.prayedAtChapel)
         {
             questVariables.isEverythingAchieved = true;
-            UIHandler.Instance.panelText.text = "Everything ready for ritual!";
+            UIHandler.Instance.panelText.text = "Done.";
             // Debug.Log("All quests completed!");
         }
         else

@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d648cd2f634e7f84ab5173ca253cbecf, type: 3}
+  m_Name: 3DialogueCorrect
+  m_EditorClassIdentifier: 
+  dialogueLines:
+  - text: What.. what are your demands?
+    characterName: Pellar
+    characterPortrait: {fileID: 21300000, guid: 0a52251274713e64a9b2200db7aed0bb, type: 3}
+  - text: Give me.. Part of your soul.. as the exchange for the boy
+    characterName: 
+    characterPortrait: {fileID: 2229773070677313066, guid: 55bc7a16c257c4842b81e667b5ebcb97, type: 3}
+  - text: Just enough to let the child go. Would that trouble you so much? You would
+      keep the rest of your light... And the boy would be free.
+    characterName: 
+    characterPortrait: {fileID: 2229773070677313066, guid: 55bc7a16c257c4842b81e667b5ebcb97, type: 3}
+  - text: Piece of my light... for his soul's release. That's the price?
+    characterName: 
+    characterPortrait: {fileID: 21300000, guid: 0a52251274713e64a9b2200db7aed0bb, type: 3}
+  - text: And if I give this piece of myself... you'll let him go? No games? No...
+      tricks?
+    characterName: 
+    characterPortrait: {fileID: 21300000, guid: 0a52251274713e64a9b2200db7aed0bb, type: 3}
+  - text: Only promises. The child is not mine to keep... only yours to lose.
+    characterName: 
+    characterPortrait: {fileID: 2229773070677313066, guid: 55bc7a16c257c4842b81e667b5ebcb97, type: 3}
+  - text: Then it's decided.
+    characterName: 
+    characterPortrait: {fileID: 21300000, guid: 0a52251274713e64a9b2200db7aed0bb, type: 3}
+  - text: But I want to see him released. Now.
+    characterName: 
+    characterPortrait: {fileID: 21300000, guid: 0a52251274713e64a9b2200db7aed0bb, type: 3}
+  - text: You are bold for one who walks the path of death. Very well.
+    characterName: 
+    characterPortrait: {fileID: 2229773070677313066, guid: 55bc7a16c257c4842b81e667b5ebcb97, type: 3}
+  - text: You gave the creature part of your soul.. What will be the consequences?
+    characterName: 
+    characterPortrait: {fileID: 0}
+  - text: Suddenly you feel strange pain in your chest
+    characterName: 
+    characterPortrait: {fileID: 0}
+  - text: Ghhh!!
+    characterName: Pellar
+    characterPortrait: {fileID: 0}
+  - text: The sacrifice was made.
+    characterName: Pellar
+    characterPortrait: {fileID: 0}
+  ghostName: 
+  isMultipleChoice: 0
+  multipleChoice:
+    choiceDescription: 
+    choices: []
+  defaultGhostPortrait: {fileID: 0}
+  startNextDialogueAutomatically: 0
+  spawnEnemy: 0
+  setPlayerHealthToOne: 0

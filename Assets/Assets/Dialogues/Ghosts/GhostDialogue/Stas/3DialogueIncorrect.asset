@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d648cd2f634e7f84ab5173ca253cbecf, type: 3}
+  m_Name: 3DialogueIncorrect
+  m_EditorClassIdentifier: 
+  dialogueLines:
+  - text: 'The shadow-creature tightens its grip on the child, dragging him further
+      into the darkness. The boy''s small feet barely touch the ground, his legs
+      kicking weakly as he tries to resist. '
+    characterName: 
+    characterPortrait: {fileID: 0}
+  - text: "You watch helplessly as the thing pulls the child toward its writhing,
+      tendrilous mass. The boy's spirit thrashes, his face contorted in panic, but
+      his efforts are futile. A keening wail, faint and desperate, escapes his lips.\r"
+    characterName: 
+    characterPortrait: {fileID: 0}
+  - text: Please... don't make me go back...
+    characterName: "Sta\u015B"
+    characterPortrait: {fileID: 0}
+  - text: "The sound is raw, primal\u2014filling the space as if it could push back
+      the suffocating cold. You force yourself to hold steady, not to flinch as the
+      child's cries intensify. "
+    characterName: 
+    characterPortrait: {fileID: 0}
+  - text: " Someone! Anyone! Please\u2014! "
+    characterName: "Sta\u015B"
+    characterPortrait: {fileID: 0}
+  - text: ' His body jerks as the thing drags him backward, his limbs twitching as
+      if caught in a nightmare he can''t wake from.'
+    characterName: "Sta\u015B"
+    characterPortrait: {fileID: 0}
+  - text: "The sound is wet and wrong\u2014something that should never be heard by
+      living ears. You flinch before you can stop yourself, the sharp intake of breath
+      leaving your mouth in a puff of mist."
+    characterName: 
+    characterPortrait: {fileID: 0}
+  - text: "The creature's hand\u2014if it can be called that\u2014ripples like oil,
+      its fingers elongated and dark, wrenching the child apart. You turn away too
+      late; the image burns behind your eyes anyway."
+    characterName: 
+    characterPortrait: {fileID: 0}
+  - text: You sense the cold drain out of the room as the last of the child's light
+      dissolves. The silence that follows is heavier than any noise could be. Your
+      hands shake at your sides, the ritual book slipping from your grip, its pages
+      scattering across the stone floor.
+    characterName: 
+    characterPortrait: {fileID: 0}
+  - text: The boy was devoured by the creature... Forever lost and not to be remembered
+    characterName: 
+    characterPortrait: {fileID: 0}
+  ghostName: 
+  isMultipleChoice: 0
+  multipleChoice:
+    choiceDescription: 
+    choices: []
+  defaultGhostPortrait: {fileID: 0}
+  startNextDialogueAutomatically: 0

@@ -15,10 +15,14 @@ MonoBehaviour:
   dialogueLines:
   - text: That's... Ridiculous.. You know ghosts are not real are you? We will look
       at your hands..
-    characterName: 
+    characterName: Mayor
     characterPortrait: {fileID: 21300000, guid: 09b90f90b051f8e4eaafd32d657783bf, type: 3}
-  ghostName: Duch
+  ghostName: 
+  isMultipleChoice: 0
   multipleChoice:
     choiceDescription: 
     choices: []
   defaultGhostPortrait: {fileID: 0}
+  startNextDialogueAutomatically: 0
+  spawnEnemy: 0
+  setPlayerHealthToOne: 0

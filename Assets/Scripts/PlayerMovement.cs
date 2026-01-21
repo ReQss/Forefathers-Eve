@@ -28,6 +28,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        
+        maxHealth = GameManager.Instance.health;
         rb = GetComponent<Rigidbody2D>();
         // spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>(); 

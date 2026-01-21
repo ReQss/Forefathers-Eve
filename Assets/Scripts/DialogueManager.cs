@@ -22,6 +22,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private DialogueUI dialogueUI;
     
     public DialogueData currentDialogue;
+    public DialogueData prevDialogue;
     private int currentLineIndex = 0;
     private bool isDialogueActive = false;
     public DialogueData startRitualMonologue;
@@ -122,6 +123,7 @@ public class DialogueManager : MonoBehaviour
         {
             PlayerMovement.Instance.animator.SetBool("Running",false);
         }
+        
         currentDialogue = dialogue;
         currentLineIndex = 0;
         isDialogueActive = true;
@@ -200,6 +202,7 @@ public class DialogueManager : MonoBehaviour
     public void EndDialogue()
     {
         isDialogueActive = false;
+        prevDialogue = currentDialogue;
         currentDialogue = null;
         currentLineIndex = 0;
 
@@ -233,6 +236,12 @@ public class DialogueManager : MonoBehaviour
                     if(GameManager.Instance != null)
                     {
                         GameManager.Instance.ghostGoodChoices++;
+                    }
+                    if(prevDialogue.setPlayerHealthToOne)
+                    {
+                        PlayerMovement.Instance.currentHealth = 1;
+                        GameManager.Instance.health = 1;
+                        UIHandler.Instance.UpdateHealthBar();
                     }
                 }
                 else if(zone == Zone.SaveZone)
@@ -269,6 +278,10 @@ public class DialogueManager : MonoBehaviour
             onDialogueEnd.Invoke();
             onDialogueEnd = null;
         }
+        if(prevDialogue.startNextDialogueAutomatically== true)
+        {
+            StartDialogue(GetDialogue());
+        }
     }
 
     public bool IsDialogueActive()
@@ -280,6 +293,8 @@ public class DialogueManager : MonoBehaviour
         if(enemySpawner == null)return;
         
         Debug.Log("Incorrect choice made.");
-        enemySpawner.SpawnEnemy();
+        if(prevDialogue.spawnEnemy == false)return;
+        else enemySpawner.SpawnEnemy();
+
     }
 }

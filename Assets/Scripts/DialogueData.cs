@@ -31,5 +31,8 @@ public class DialogueData : ScriptableObject
     public bool isMultipleChoice = false;
     public DialogueMultipleChoice multipleChoice;
     public Sprite defaultGhostPortrait; // Domyślny obraz ducha jeśli linia dialogowa nie ma własnego
+    public bool startNextDialogueAutomatically = false;
+    public bool spawnEnemy = false;
+    public bool setPlayerHealthToOne = false;
 }
 

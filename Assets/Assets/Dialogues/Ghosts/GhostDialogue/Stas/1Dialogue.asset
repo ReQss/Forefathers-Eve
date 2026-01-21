@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d648cd2f634e7f84ab5173ca253cbecf, type: 3}
+  m_Name: 1Dialogue
+  m_EditorClassIdentifier: 
+  dialogueLines:
+  - text: "Who\u2026 who\u2019s there? Is\u2026 is anyone alive?"
+    characterName: 
+    characterPortrait: {fileID: 0}
+  - text: "I am a friend. Don\u2019t be afraid. Who are you?"
+    characterName: Pellar
+    characterPortrait: {fileID: 21300000, guid: 0a52251274713e64a9b2200db7aed0bb, type: 3}
+  - text: "I\u2026 I don\u2019t remember\u2026 only darkness\u2026 and pain\u2026
+      and longing\u2026"
+    characterName: 
+    characterPortrait: {fileID: 0}
+  - text: "Longing\u2026 for whom?"
+    characterName: Pellar
+    characterPortrait: {fileID: 21300000, guid: 0a52251274713e64a9b2200db7aed0bb, type: 3}
+  - text: "For home\u2026 for my mother\u2026 for the days when everything was bright\u2026
+      Now\u2026 now there\u2019s only shadows and cold."
+    characterName: 
+    characterPortrait: {fileID: 0}
+  - text: "Maybe I can help you\u2026 find peace."
+    characterName: Pellar
+    characterPortrait: {fileID: 21300000, guid: 0a52251274713e64a9b2200db7aed0bb, type: 3}
+  - text: "Peace\u2026 yes, peace\u2026 But how? Can anyone free a soul\u2026 when
+      even memories are prison?"
+    characterName: Pellar
+    characterPortrait: {fileID: 0}
+  - text: (The mist swirls around the player. The spirit drifts closer, still untouchable.)
+    characterName: 
+    characterPortrait: {fileID: 0}
+  - text: "Let\u2019s try together\u2026 tell me, what do you feel the most?"
+    characterName: Pellar
+    characterPortrait: {fileID: 21300000, guid: 0a52251274713e64a9b2200db7aed0bb, type: 3}
+  - text: "Fear\u2026 loneliness\u2026 and\u2026 pain\u2026 It hurts when I can\u2019t
+      find the way\u2026"
+    characterName: Pellar
+    characterPortrait: {fileID: 0}
+  - text: "I understand\u2026 it\u2019s hard\u2026 but we must do something. Do you
+      remember anything that might set you free?"
+    characterName: Pellar
+    characterPortrait: {fileID: 21300000, guid: 0a52251274713e64a9b2200db7aed0bb, type: 3}
+  - text: "Maybe\u2026 a promise\u2026 a promise made in the dark\u2026 But I don\u2019t
+      remember to whom\u2026"
+    characterName: Pellar
+    characterPortrait: {fileID: 21300000, guid: 0a52251274713e64a9b2200db7aed0bb, type: 3}
+  - text: (The spirit slowly begins to take on a more ethereal, mist-like form, voice
+      weakening.)
+    characterName: Pellar
+    characterPortrait: {fileID: 21300000, guid: 0a52251274713e64a9b2200db7aed0bb, type: 3}
+  ghostName: 
+  isMultipleChoice: 0
+  multipleChoice:
+    choiceDescription: Will you spare some coin?
+    choices: []
+  defaultGhostPortrait: {fileID: 0}
+  startNextDialogueAutomatically: 1

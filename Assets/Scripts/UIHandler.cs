@@ -93,6 +93,8 @@ public class UIHandler : MonoBehaviour
      
     public void RemoveResourceUI(ResourceType resourceType)
     {
+        
+        GameManager.Instance.CheckQuests();
         foreach (QuestResources qr in questResources)
         {
             if(qr.resourceType == resourceType)

@@ -13,12 +13,17 @@ MonoBehaviour:
   m_Name: startGraveyardMonologue
   m_EditorClassIdentifier: 
   dialogueLines:
-  - text: It's already morning! I should go clean the graveyard!
-    characterName: You
-    characterPortrait: {fileID: 21300000, guid: 6be477f9100b8c0478ead771d7c1a79a, type: 3}
-  ghostName: Duch
+  - text: It's... Already morning... I shouldn't be here.. The people will starts
+      to suspect something.
+    characterName: Pellar
+    characterPortrait: {fileID: 21300000, guid: 0a52251274713e64a9b2200db7aed0bb, type: 3}
+  - text: I should start doing tasks at the graveyard..
+    characterName: Pellar
+    characterPortrait: {fileID: 21300000, guid: 0a52251274713e64a9b2200db7aed0bb, type: 3}
+  ghostName: 
   isMultipleChoice: 0
   multipleChoice:
     choiceDescription: 
     choices: []
   defaultGhostPortrait: {fileID: 0}
+  startNextDialogueAutomatically: 0

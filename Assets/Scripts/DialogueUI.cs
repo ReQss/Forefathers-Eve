@@ -20,6 +20,7 @@ public class DialogueUI : MonoBehaviour
 
     private bool isTyping = false;
     private string currentDialogueText = "";
+    public GameObject darkBackground;
 
     void Start()
     {
@@ -98,6 +99,10 @@ public void switchActiveMultipleChoiceUI()
         if (dialoguePanel != null)
         {
             dialoguePanel.SetActive(true);
+            if( darkBackground != null ){
+                darkBackground.SetActive(true);
+                darkBackground.GetComponent<Animator>().SetTrigger("fadeIn");
+            }
         }
     }
 
