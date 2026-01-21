@@ -190,6 +190,7 @@ public class UIHandler : MonoBehaviour
 
     public void HidePlayerTip()
     {
+        if(playerTipsText != null)
         playerTipsText.gameObject.SetActive(false);
     }
 }

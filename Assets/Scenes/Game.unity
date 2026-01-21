@@ -11115,8 +11115,10 @@ MonoBehaviour:
     currentDialogueIndex: 0
   ritualZoneDialogues:
     dialogues:
+    - {fileID: 11400000, guid: d939e6ae33901744f8f56147fdc11818, type: 2}
     - {fileID: 11400000, guid: ac29e47df227db74797f1706d6d1230b, type: 2}
-    - {fileID: 11400000, guid: 9e2e812c5e70ef443b78efdf5cd49640, type: 2}
+    - {fileID: 11400000, guid: 7b4f6aa55020e904593d780e1a0fdd52, type: 2}
+    - {fileID: 11400000, guid: bf98602fe20a106469e20d0afe3f4327, type: 2}
     currentDialogueIndex: 0
   ghostGoodChoices: 0
   ghostBadChoices: 0
