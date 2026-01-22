@@ -230,7 +230,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -4441173242660805989, guid: f9496d2539dcf8a42af08a60483974a6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.2603773, g: 0.2603773, b: 0.2603773, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -529,7 +529,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 5675979515066771474, guid: 3ab7307a952e98348967bf0d645ce5cd, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.3433962, g: 0.3433962, b: 0.3433962, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1260,7 +1260,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 5675979515066771474, guid: 3ab7307a952e98348967bf0d645ce5cd, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.3433962, g: 0.3433962, b: 0.3433962, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2312,7 +2312,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -4441173242660805989, guid: f9496d2539dcf8a42af08a60483974a6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.2603773, g: 0.2603773, b: 0.2603773, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3093,6 +3093,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 70179139}
     m_Modifications:
+    - target: {fileID: 248215348441534969, guid: 2cdebfd1a761a6447a134d4e1aa4e961, type: 3}
+      propertyPath: m_Color.b
+      value: 0.3433962
+      objectReference: {fileID: 0}
+    - target: {fileID: 248215348441534969, guid: 2cdebfd1a761a6447a134d4e1aa4e961, type: 3}
+      propertyPath: m_Color.g
+      value: 0.3433962
+      objectReference: {fileID: 0}
+    - target: {fileID: 248215348441534969, guid: 2cdebfd1a761a6447a134d4e1aa4e961, type: 3}
+      propertyPath: m_Color.r
+      value: 0.3433962
+      objectReference: {fileID: 0}
     - target: {fileID: 6362658412948134999, guid: 2cdebfd1a761a6447a134d4e1aa4e961, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.114879
@@ -3209,6 +3221,18 @@ PrefabInstance:
     - target: {fileID: 6933598785687118416, guid: 41a29a37418a4ac4e882ba4c9bde562c, type: 3}
       propertyPath: m_Name
       value: Krzak_0 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7306506453017589110, guid: 41a29a37418a4ac4e882ba4c9bde562c, type: 3}
+      propertyPath: m_Color.b
+      value: 0.2603773
+      objectReference: {fileID: 0}
+    - target: {fileID: 7306506453017589110, guid: 41a29a37418a4ac4e882ba4c9bde562c, type: 3}
+      propertyPath: m_Color.g
+      value: 0.2603773
+      objectReference: {fileID: 0}
+    - target: {fileID: 7306506453017589110, guid: 41a29a37418a4ac4e882ba4c9bde562c, type: 3}
+      propertyPath: m_Color.r
+      value: 0.2603773
       objectReference: {fileID: 0}
     - target: {fileID: 7306506453017589110, guid: 41a29a37418a4ac4e882ba4c9bde562c, type: 3}
       propertyPath: m_SpriteSortPoint
@@ -3519,6 +3543,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 70179139}
     m_Modifications:
+    - target: {fileID: 248215348441534969, guid: 2cdebfd1a761a6447a134d4e1aa4e961, type: 3}
+      propertyPath: m_Color.b
+      value: 0.3433962
+      objectReference: {fileID: 0}
+    - target: {fileID: 248215348441534969, guid: 2cdebfd1a761a6447a134d4e1aa4e961, type: 3}
+      propertyPath: m_Color.g
+      value: 0.3433962
+      objectReference: {fileID: 0}
+    - target: {fileID: 248215348441534969, guid: 2cdebfd1a761a6447a134d4e1aa4e961, type: 3}
+      propertyPath: m_Color.r
+      value: 0.3433962
+      objectReference: {fileID: 0}
     - target: {fileID: 6362658412948134999, guid: 2cdebfd1a761a6447a134d4e1aa4e961, type: 3}
       propertyPath: m_LocalPosition.x
       value: -18.600735
@@ -6748,7 +6784,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 5675979515066771474, guid: 3ab7307a952e98348967bf0d645ce5cd, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.3433962, g: 0.3433962, b: 0.3433962, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -7428,6 +7464,18 @@ PrefabInstance:
       value: Krzak_0 (2)
       objectReference: {fileID: 0}
     - target: {fileID: 7306506453017589110, guid: 41a29a37418a4ac4e882ba4c9bde562c, type: 3}
+      propertyPath: m_Color.b
+      value: 0.2603773
+      objectReference: {fileID: 0}
+    - target: {fileID: 7306506453017589110, guid: 41a29a37418a4ac4e882ba4c9bde562c, type: 3}
+      propertyPath: m_Color.g
+      value: 0.2603773
+      objectReference: {fileID: 0}
+    - target: {fileID: 7306506453017589110, guid: 41a29a37418a4ac4e882ba4c9bde562c, type: 3}
+      propertyPath: m_Color.r
+      value: 0.2603773
+      objectReference: {fileID: 0}
+    - target: {fileID: 7306506453017589110, guid: 41a29a37418a4ac4e882ba4c9bde562c, type: 3}
       propertyPath: m_SpriteSortPoint
       value: 0
       objectReference: {fileID: 0}
@@ -7824,6 +7872,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 70179139}
     m_Modifications:
+    - target: {fileID: 248215348441534969, guid: 2cdebfd1a761a6447a134d4e1aa4e961, type: 3}
+      propertyPath: m_Color.b
+      value: 0.3433962
+      objectReference: {fileID: 0}
+    - target: {fileID: 248215348441534969, guid: 2cdebfd1a761a6447a134d4e1aa4e961, type: 3}
+      propertyPath: m_Color.g
+      value: 0.3433962
+      objectReference: {fileID: 0}
+    - target: {fileID: 248215348441534969, guid: 2cdebfd1a761a6447a134d4e1aa4e961, type: 3}
+      propertyPath: m_Color.r
+      value: 0.3433962
+      objectReference: {fileID: 0}
     - target: {fileID: 6362658412948134999, guid: 2cdebfd1a761a6447a134d4e1aa4e961, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12.373669
@@ -8390,6 +8450,18 @@ PrefabInstance:
     - target: {fileID: 6933598785687118416, guid: 41a29a37418a4ac4e882ba4c9bde562c, type: 3}
       propertyPath: m_Name
       value: Krzak_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7306506453017589110, guid: 41a29a37418a4ac4e882ba4c9bde562c, type: 3}
+      propertyPath: m_Color.b
+      value: 0.2603773
+      objectReference: {fileID: 0}
+    - target: {fileID: 7306506453017589110, guid: 41a29a37418a4ac4e882ba4c9bde562c, type: 3}
+      propertyPath: m_Color.g
+      value: 0.2603773
+      objectReference: {fileID: 0}
+    - target: {fileID: 7306506453017589110, guid: 41a29a37418a4ac4e882ba4c9bde562c, type: 3}
+      propertyPath: m_Color.r
+      value: 0.2603773
       objectReference: {fileID: 0}
     - target: {fileID: 7306506453017589110, guid: 41a29a37418a4ac4e882ba4c9bde562c, type: 3}
       propertyPath: m_SpriteSortPoint
@@ -10097,6 +10169,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 70179139}
     m_Modifications:
+    - target: {fileID: 248215348441534969, guid: 2cdebfd1a761a6447a134d4e1aa4e961, type: 3}
+      propertyPath: m_Color.b
+      value: 0.3433962
+      objectReference: {fileID: 0}
+    - target: {fileID: 248215348441534969, guid: 2cdebfd1a761a6447a134d4e1aa4e961, type: 3}
+      propertyPath: m_Color.g
+      value: 0.3433962
+      objectReference: {fileID: 0}
+    - target: {fileID: 248215348441534969, guid: 2cdebfd1a761a6447a134d4e1aa4e961, type: 3}
+      propertyPath: m_Color.r
+      value: 0.3433962
+      objectReference: {fileID: 0}
     - target: {fileID: 6362658412948134999, guid: 2cdebfd1a761a6447a134d4e1aa4e961, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15.82
@@ -10253,6 +10337,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 70179139}
     m_Modifications:
+    - target: {fileID: 248215348441534969, guid: 2cdebfd1a761a6447a134d4e1aa4e961, type: 3}
+      propertyPath: m_Color.b
+      value: 0.3433962
+      objectReference: {fileID: 0}
+    - target: {fileID: 248215348441534969, guid: 2cdebfd1a761a6447a134d4e1aa4e961, type: 3}
+      propertyPath: m_Color.g
+      value: 0.3433962
+      objectReference: {fileID: 0}
+    - target: {fileID: 248215348441534969, guid: 2cdebfd1a761a6447a134d4e1aa4e961, type: 3}
+      propertyPath: m_Color.r
+      value: 0.3433962
+      objectReference: {fileID: 0}
     - target: {fileID: 6362658412948134999, guid: 2cdebfd1a761a6447a134d4e1aa4e961, type: 3}
       propertyPath: m_LocalPosition.x
       value: 13.65
@@ -11099,6 +11195,18 @@ PrefabInstance:
     - target: {fileID: 6933598785687118416, guid: 41a29a37418a4ac4e882ba4c9bde562c, type: 3}
       propertyPath: m_Name
       value: Krzak_0 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7306506453017589110, guid: 41a29a37418a4ac4e882ba4c9bde562c, type: 3}
+      propertyPath: m_Color.b
+      value: 0.2603773
+      objectReference: {fileID: 0}
+    - target: {fileID: 7306506453017589110, guid: 41a29a37418a4ac4e882ba4c9bde562c, type: 3}
+      propertyPath: m_Color.g
+      value: 0.2603773
+      objectReference: {fileID: 0}
+    - target: {fileID: 7306506453017589110, guid: 41a29a37418a4ac4e882ba4c9bde562c, type: 3}
+      propertyPath: m_Color.r
+      value: 0.2603773
       objectReference: {fileID: 0}
     - target: {fileID: 7306506453017589110, guid: 41a29a37418a4ac4e882ba4c9bde562c, type: 3}
       propertyPath: m_SpriteSortPoint
@@ -12157,6 +12265,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 70179139}
     m_Modifications:
+    - target: {fileID: 248215348441534969, guid: 2cdebfd1a761a6447a134d4e1aa4e961, type: 3}
+      propertyPath: m_Color.b
+      value: 0.3433962
+      objectReference: {fileID: 0}
+    - target: {fileID: 248215348441534969, guid: 2cdebfd1a761a6447a134d4e1aa4e961, type: 3}
+      propertyPath: m_Color.g
+      value: 0.3433962
+      objectReference: {fileID: 0}
+    - target: {fileID: 248215348441534969, guid: 2cdebfd1a761a6447a134d4e1aa4e961, type: 3}
+      propertyPath: m_Color.r
+      value: 0.3433962
+      objectReference: {fileID: 0}
     - target: {fileID: 6362658412948134999, guid: 2cdebfd1a761a6447a134d4e1aa4e961, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.1515756
@@ -14477,6 +14597,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Krzak_0 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 7306506453017589110, guid: 41a29a37418a4ac4e882ba4c9bde562c, type: 3}
+      propertyPath: m_Color.b
+      value: 0.2603773
+      objectReference: {fileID: 0}
+    - target: {fileID: 7306506453017589110, guid: 41a29a37418a4ac4e882ba4c9bde562c, type: 3}
+      propertyPath: m_Color.g
+      value: 0.2603773
+      objectReference: {fileID: 0}
+    - target: {fileID: 7306506453017589110, guid: 41a29a37418a4ac4e882ba4c9bde562c, type: 3}
+      propertyPath: m_Color.r
+      value: 0.2603773
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14533,6 +14665,18 @@ PrefabInstance:
     - target: {fileID: 6933598785687118416, guid: 41a29a37418a4ac4e882ba4c9bde562c, type: 3}
       propertyPath: m_Name
       value: Krzak_0 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7306506453017589110, guid: 41a29a37418a4ac4e882ba4c9bde562c, type: 3}
+      propertyPath: m_Color.b
+      value: 0.2603773
+      objectReference: {fileID: 0}
+    - target: {fileID: 7306506453017589110, guid: 41a29a37418a4ac4e882ba4c9bde562c, type: 3}
+      propertyPath: m_Color.g
+      value: 0.2603773
+      objectReference: {fileID: 0}
+    - target: {fileID: 7306506453017589110, guid: 41a29a37418a4ac4e882ba4c9bde562c, type: 3}
+      propertyPath: m_Color.r
+      value: 0.2603773
       objectReference: {fileID: 0}
     - target: {fileID: 7306506453017589110, guid: 41a29a37418a4ac4e882ba4c9bde562c, type: 3}
       propertyPath: m_SpriteSortPoint
@@ -15498,7 +15642,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -4441173242660805989, guid: f9496d2539dcf8a42af08a60483974a6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.2603773, g: 0.2603773, b: 0.2603773, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -17876,6 +18020,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1348784476}
     m_Modifications:
+    - target: {fileID: 248215348441534969, guid: 2cdebfd1a761a6447a134d4e1aa4e961, type: 3}
+      propertyPath: m_Color.b
+      value: 0.3433962
+      objectReference: {fileID: 0}
+    - target: {fileID: 248215348441534969, guid: 2cdebfd1a761a6447a134d4e1aa4e961, type: 3}
+      propertyPath: m_Color.g
+      value: 0.3433962
+      objectReference: {fileID: 0}
+    - target: {fileID: 248215348441534969, guid: 2cdebfd1a761a6447a134d4e1aa4e961, type: 3}
+      propertyPath: m_Color.r
+      value: 0.3433962
+      objectReference: {fileID: 0}
     - target: {fileID: 6362658412948134999, guid: 2cdebfd1a761a6447a134d4e1aa4e961, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.099894
