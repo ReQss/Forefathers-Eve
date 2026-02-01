@@ -8,6 +8,7 @@ public class DialogueLine
     public string text;
     public string characterName = "Duch";
     public Sprite characterPortrait; // Obraz postaci do wyświetlenia po lewej stronie
+    public AudioClip dialogueAudioClip;
 }
 [System.Serializable]
 public class DialogueChoice
@@ -34,5 +35,6 @@ public class DialogueData : ScriptableObject
     public bool startNextDialogueAutomatically = false;
     public bool spawnEnemy = false;
     public bool setPlayerHealthToOne = false;
+    public bool stopSoundAfterDialogue = false;
 }
 

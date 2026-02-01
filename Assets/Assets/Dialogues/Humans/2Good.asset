@@ -10,41 +10,35 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d648cd2f634e7f84ab5173ca253cbecf, type: 3}
-  m_Name: FirstEncounter
+  m_Name: 2Good
   m_EditorClassIdentifier: 
   dialogueLines:
-  - text: Welcome to our village!
-    characterName: Mayor
-    characterPortrait: {fileID: 21300000, guid: 09b90f90b051f8e4eaafd32d657783bf, type: 3}
+  - text: I am sorry sir.. I am just a poor sheephard.. I just got lost in the forest
+      since it was my first day..
+    characterName: Bogdan
+    characterPortrait: {fileID: 21300000, guid: 0a52251274713e64a9b2200db7aed0bb, type: 3}
     dialogueAudioClip: {fileID: 0}
-  - text: Try anything and I will stab you!
+  - text: That.. Explain the light inside the forest.. BUT! THE GHOST! I SAW IT!
     characterName: Farmer
     characterPortrait: {fileID: 21300000, guid: 38356a3297e4cda47b0141bdb18915cd, type: 3}
     dialogueAudioClip: {fileID: 0}
-  - text: Hello handsome man.
-    characterName: Old lady
-    characterPortrait: {fileID: -6923803258048027885, guid: 93601b4066616fc4db221af6db1358ce, type: 3}
-    dialogueAudioClip: {fileID: 0}
-  - text: Hi, My name is Bogdan
+  - text: Yes.. I was helping young boy.. He got lost after coming to the church..
     characterName: Pellar
     characterPortrait: {fileID: 21300000, guid: 0a52251274713e64a9b2200db7aed0bb, type: 3}
     dialogueAudioClip: {fileID: 0}
-  - text: It's very nice to meet you Bogdan, may I know what's your purpose of staying
-      in our village?
+  - text: .. Excelent work! Thank you for your service in that case
     characterName: Mayor
     characterPortrait: {fileID: 21300000, guid: 09b90f90b051f8e4eaafd32d657783bf, type: 3}
     dialogueAudioClip: {fileID: 0}
-  ghostName: 
-  isMultipleChoice: 1
+  - text: I will take this farmer and scold him for his words
+    characterName: Mayor
+    characterPortrait: {fileID: 21300000, guid: 09b90f90b051f8e4eaafd32d657783bf, type: 3}
+    dialogueAudioClip: {fileID: 0}
+  ghostName: Duch
+  isMultipleChoice: 0
   multipleChoice:
-    choiceDescription: What's your purpose of coming here?
-    choices:
-    - choiceText: I am just a humble sheephard
-      correctness: 1
-      afterChoiceDialogue: {fileID: 11400000, guid: 4dfb542aec85c124fa43f688c48a9b08, type: 2}
-    - choiceText: I came here from the order of church
-      correctness: 2
-      afterChoiceDialogue: {fileID: 11400000, guid: 2efd98960e6e0c94eb744545b704a9d7, type: 2}
+    choiceDescription: 
+    choices: []
   defaultGhostPortrait: {fileID: 0}
   startNextDialogueAutomatically: 0
   spawnEnemy: 0

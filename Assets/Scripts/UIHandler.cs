@@ -43,6 +43,7 @@ public class UIHandler : MonoBehaviour
      public Image healthBarImage;
      public GraveyardHandler graveyardHandler;
      public GameObject pauseMenu;
+     public GameObject blackDialogueBackground;
 
     public string[] tips = {
         "Remember to save your progress!",
@@ -192,5 +193,10 @@ public class UIHandler : MonoBehaviour
     {
         if(playerTipsText != null)
         playerTipsText.gameObject.SetActive(false);
+    }
+    public void DisableBlackBackground()
+    {
+        if(blackDialogueBackground!=null)
+        blackDialogueBackground.SetActive(false);
     }
 }

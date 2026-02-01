@@ -10,39 +10,32 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d648cd2f634e7f84ab5173ca253cbecf, type: 3}
-  m_Name: 0Bad
+  m_Name: 2Bad
   m_EditorClassIdentifier: 
   dialogueLines:
-  - text: My name is Bohdan.. I was sent here by the church to take care of some
-      activities
+  - text: Sir.. Are you sure you saw the ghosts? Ghost are not real
     characterName: Pellar
     characterPortrait: {fileID: 21300000, guid: 0a52251274713e64a9b2200db7aed0bb, type: 3}
     dialogueAudioClip: {fileID: 0}
-  - text: I think I know this name from somewhere.. Do you mind telling us about
-      this "activities"?
-    characterName: Mayor
-    characterPortrait: {fileID: 21300000, guid: 09b90f90b051f8e4eaafd32d657783bf, type: 3}
-    dialogueAudioClip: {fileID: 0}
-  - text: The church decided to carry out reforms in this town. I was sent here to
-      prepare this town for this.
+  - text: I think you say heresies.. That's not something anyone should say in front
+      of church messenger
     characterName: Pellar
     characterPortrait: {fileID: 21300000, guid: 0a52251274713e64a9b2200db7aed0bb, type: 3}
     dialogueAudioClip: {fileID: 0}
-  - text: That's.. Ridiculous.. I am not sure If we can allow you that
+  - text: I... I am sorry.. Maybe I was wrong
+    characterName: Farmer
+    characterPortrait: {fileID: 21300000, guid: 38356a3297e4cda47b0141bdb18915cd, type: 3}
+    dialogueAudioClip: {fileID: 0}
+  - text: Maybe you are church messenger but light in the forest is not something
+      someone could mistake..
     characterName: Mayor
     characterPortrait: {fileID: 21300000, guid: 09b90f90b051f8e4eaafd32d657783bf, type: 3}
     dialogueAudioClip: {fileID: 0}
-  - text: 'For now.. We will keep an eye on you.. But don''t try anything or we will
-      have to intervene '
+  - text: If it happens next time we will have to take investigation into your work..
     characterName: Mayor
     characterPortrait: {fileID: 21300000, guid: 09b90f90b051f8e4eaafd32d657783bf, type: 3}
     dialogueAudioClip: {fileID: 0}
-  - text: I am very sorry for unpleasant information.. Thank you for your service
-      and help
-    characterName: Pellar
-    characterPortrait: {fileID: 21300000, guid: 0a52251274713e64a9b2200db7aed0bb, type: 3}
-    dialogueAudioClip: {fileID: 0}
-  ghostName: 
+  ghostName: Duch
   isMultipleChoice: 0
   multipleChoice:
     choiceDescription: 

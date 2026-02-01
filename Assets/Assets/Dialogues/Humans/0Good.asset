@@ -13,9 +13,32 @@ MonoBehaviour:
   m_Name: 0Good
   m_EditorClassIdentifier: 
   dialogueLines:
-  - text: That's good to hear! You are very welcome.
+  - text: I am just a humble shepherd sir.. I came her to take care of the church
+      and graveyard
+    characterName: Pellar
+    characterPortrait: {fileID: 21300000, guid: 0a52251274713e64a9b2200db7aed0bb, type: 3}
+    dialogueAudioClip: {fileID: 0}
+  - text: 'I see this graveyard might need some cleaning.. '
+    characterName: Pellar
+    characterPortrait: {fileID: 21300000, guid: 0a52251274713e64a9b2200db7aed0bb, type: 3}
+    dialogueAudioClip: {fileID: 0}
+  - text: Yes.. In deed this graveyard was abandoned for a long time..
     characterName: Mayor
     characterPortrait: {fileID: 21300000, guid: 09b90f90b051f8e4eaafd32d657783bf, type: 3}
+    dialogueAudioClip: {fileID: 0}
+  - text: We are very glad someone responsible like you came to our town
+    characterName: Mayor
+    characterPortrait: {fileID: 21300000, guid: 09b90f90b051f8e4eaafd32d657783bf, type: 3}
+    dialogueAudioClip: {fileID: 0}
+  - text: I hope you will have a pleasant stay.. If you need anything we will come
+      tommorow to check on your work
+    characterName: Mayor
+    characterPortrait: {fileID: 21300000, guid: 09b90f90b051f8e4eaafd32d657783bf, type: 3}
+    dialogueAudioClip: {fileID: 0}
+  - text: Sure.. See you tommorow then
+    characterName: Pellar
+    characterPortrait: {fileID: 21300000, guid: 0a52251274713e64a9b2200db7aed0bb, type: 3}
+    dialogueAudioClip: {fileID: 0}
   ghostName: 
   isMultipleChoice: 0
   multipleChoice:
@@ -25,3 +48,4 @@ MonoBehaviour:
   startNextDialogueAutomatically: 0
   spawnEnemy: 0
   setPlayerHealthToOne: 0
+  stopSoundAfterDialogue: 0

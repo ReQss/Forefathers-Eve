@@ -32,6 +32,8 @@ public class DialogueManager : MonoBehaviour
     public EnemySpawner enemySpawner;
     public SceneDialogues sceneDialogues;
     public Zone zone;
+    public AudioSource audioSource;
+    public HandFollowCursor handFollowCursor;
     void Awake()
     {
         if (Instance == null)
@@ -43,8 +45,10 @@ public class DialogueManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-    void Start()
+    public bool isTutorialOver = false;
+    
+     public DialogueData tutorialDialogue;
+     void Start()
     {
         if (dialogueUI == null)
         {
@@ -71,9 +75,10 @@ public class DialogueManager : MonoBehaviour
     }
       public IEnumerator LateStart()
     {
+        // yield return new WaitUntil(() => isTutorialOver);
         if(zone != Zone.SaveZone)yield return null;
-        
-        yield return new WaitForSeconds(2f);
+        // Time.timeScale = 0f;
+        // yield return new WaitForSeconds(2f);
         if(zone == Zone.SaveZone)
         {
             StartDialogue(GetDialogue());
@@ -121,6 +126,7 @@ public class DialogueManager : MonoBehaviour
         }
         if(PlayerMovement.Instance != null)
         {
+            if(PlayerMovement.Instance.animator != null)
             PlayerMovement.Instance.animator.SetBool("Running",false);
         }
         
@@ -134,6 +140,13 @@ public class DialogueManager : MonoBehaviour
         if (PlayerMovement.Instance != null)
         {
             PlayerMovement.Instance.enabled = false;
+            if(handFollowCursor!=null){
+                handFollowCursor.handActive = false;
+                handFollowCursor.SetHandActive(false);
+            }
+            // handFollowCursor.enabled = false;
+
+
         }
 
         // Ukryj quest log podczas dialogu
@@ -161,11 +174,16 @@ public class DialogueManager : MonoBehaviour
         if (currentLineIndex >= currentDialogue.dialogueLines.Length)
         {
             EndDialogue();
+            Time.timeScale = 1f;
             return;
         }
 
         DialogueLine currentLine = currentDialogue.dialogueLines[currentLineIndex];
-        
+        if(currentLine.dialogueAudioClip != null && audioSource != null)
+        {
+            audioSource.clip = currentLine.dialogueAudioClip;
+            audioSource.Play();
+        }
         // Użyj obrazu z linii dialogowej lub domyślnego
         Sprite portraitToShow = currentLine.characterPortrait != null 
             ? currentLine.characterPortrait 
@@ -196,20 +214,32 @@ public class DialogueManager : MonoBehaviour
         else
         {
             DisplayCurrentLine();
+            
         }
     }
 
     public void EndDialogue()
     {
+        
+        UIHandler.Instance.DisableBlackBackground();
         isDialogueActive = false;
         prevDialogue = currentDialogue;
         currentDialogue = null;
         currentLineIndex = 0;
-
+        if(prevDialogue.stopSoundAfterDialogue && audioSource != null)
+        {
+            audioSource.Stop();
+        }
         // Przywróć ruch gracza
         if (PlayerMovement.Instance != null)
         {
             PlayerMovement.Instance.enabled = true;
+            if(handFollowCursor!=null){
+                handFollowCursor.handActive = true;
+                handFollowCursor.SetHandActive(true);
+            }
+             
+            // handFollowCursor.enabled = true;
         }
 
         // Pokaż quest log z powrotem

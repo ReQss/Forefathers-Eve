@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d648cd2f634e7f84ab5173ca253cbecf, type: 3}
+  m_Name: IntroductionDialogue
+  m_EditorClassIdentifier: 
+  dialogueLines:
+  - text: "Long, long ago\u2026"
+    characterName: 
+    characterPortrait: {fileID: 0}
+    dialogueAudioClip: {fileID: 0}
+  - text: "there existed an ancient ritual known as Forefathers\u2019 Eve \u2014
+      a night when the living sought contact with the spirits of the dead."
+    characterName: 
+    characterPortrait: {fileID: 0}
+    dialogueAudioClip: {fileID: 0}
+  - text: Villagers believed that, once a year, the boundary between worlds weakened,
+      allowing souls to return. Offerings of food, candles, and prayers were prepared
+      to guide them, calm them, or ask for their blessing.
+    characterName: 
+    characterPortrait: {fileID: 0}
+    dialogueAudioClip: {fileID: 0}
+  - text: Over time, the ritual faded, remembered only in whispers and old stories.
+    characterName: 
+    characterPortrait: {fileID: 0}
+    dialogueAudioClip: {fileID: 0}
+  - text: Into this forgotten village comes Bogdan, a quiet outsider.
+    characterName: 
+    characterPortrait: {fileID: 0}
+    dialogueAudioClip: {fileID: 0}
+  - text: By day, he appears to the locals as a simple caretaker, tending to graves
+      and quietly maintaining the cemetery, blending into the rhythms of the village
+      without drawing attention.
+    characterName: 
+    characterPortrait: {fileID: 0}
+    dialogueAudioClip: {fileID: 0}
+  - text: 'But when night falls, his true purpose begins. Beneath the shadows, Bogdan
+      prepares the ancient rite of the forefathers eve. '
+    characterName: 
+    characterPortrait: {fileID: 0}
+    dialogueAudioClip: {fileID: 0}
+  - text: Candles replace sunlight, symbols replace tools, and the cemetery becomes
+      a threshold between the living and the dead.
+    characterName: 
+    characterPortrait: {fileID: 0}
+    dialogueAudioClip: {fileID: 0}
+  - text: During the day, he cleans the graveyard and deceives the townspeople
+    characterName: 
+    characterPortrait: {fileID: 0}
+    dialogueAudioClip: {fileID: 0}
+  - text: At night, he heeds the departed and must make careful choices, guiding
+      the spirits while navigating the thin line between the living and the dead.
+    characterName: 
+    characterPortrait: {fileID: 0}
+    dialogueAudioClip: {fileID: 0}
+  ghostName: 
+  isMultipleChoice: 0
+  multipleChoice:
+    choiceDescription: 
+    choices: []
+  defaultGhostPortrait: {fileID: 0}
+  startNextDialogueAutomatically: 1
+  spawnEnemy: 0
+  setPlayerHealthToOne: 0
+  stopSoundAfterDialogue: 0

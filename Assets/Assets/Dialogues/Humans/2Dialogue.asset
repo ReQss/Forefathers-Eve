@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d648cd2f634e7f84ab5173ca253cbecf, type: 3}
+  m_Name: 2Dialogue
+  m_EditorClassIdentifier: 
+  dialogueLines:
+  - text: Hello again Bogdan
+    characterName: Mayor
+    characterPortrait: {fileID: 21300000, guid: 09b90f90b051f8e4eaafd32d657783bf, type: 3}
+    dialogueAudioClip: {fileID: 0}
+  - text: Welcome
+    characterName: Bogdan
+    characterPortrait: {fileID: 21300000, guid: 09b90f90b051f8e4eaafd32d657783bf, type: 3}
+    dialogueAudioClip: {fileID: 0}
+  - text: We came here today because we got unpleasant information..
+    characterName: Mayor
+    characterPortrait: {fileID: 21300000, guid: 09b90f90b051f8e4eaafd32d657783bf, type: 3}
+    dialogueAudioClip: {fileID: 0}
+  - text: So the little bird told us something happened at the graveyard last night?
+      Do you know anything about this?
+    characterName: Mayor
+    characterPortrait: {fileID: 21300000, guid: 09b90f90b051f8e4eaafd32d657783bf, type: 3}
+    dialogueAudioClip: {fileID: 0}
+  - text: I swear! I saw the ritual in the forest next to the graveyard!
+    characterName: Farmer
+    characterPortrait: {fileID: 21300000, guid: 38356a3297e4cda47b0141bdb18915cd, type: 3}
+    dialogueAudioClip: {fileID: 0}
+  - text: It was him! And the ghost of the boy!
+    characterName: Farmer
+    characterPortrait: {fileID: 21300000, guid: 38356a3297e4cda47b0141bdb18915cd, type: 3}
+    dialogueAudioClip: {fileID: 0}
+  - text: As you can see.. We have a witness.. Do you mind explaining us the situation
+      and what was happening last night?
+    characterName: Mayor
+    characterPortrait: {fileID: 21300000, guid: 0a52251274713e64a9b2200db7aed0bb, type: 3}
+    dialogueAudioClip: {fileID: 0}
+  ghostName: 
+  isMultipleChoice: 1
+  multipleChoice:
+    choiceDescription: Explain what happened in the forest
+    choices:
+    - choiceText: You got lost
+      correctness: 1
+      afterChoiceDialogue: {fileID: 11400000, guid: 543dc2d7bf0fc094c98393028e7c5b1e, type: 2}
+    - choiceText: use the authority of the church as deception
+      correctness: 2
+      afterChoiceDialogue: {fileID: 11400000, guid: 7486e7941fb6e004fb1ca137f95c845c, type: 2}
+  defaultGhostPortrait: {fileID: 0}
+  startNextDialogueAutomatically: 0
+  spawnEnemy: 0
+  setPlayerHealthToOne: 0
+  stopSoundAfterDialogue: 0

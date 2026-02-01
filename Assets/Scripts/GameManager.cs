@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
     public int cityBadChoices = 0;
     public int collectedwoodAndStoneRequired = 4;
     public int requiredCleanedGraves = 2;
+    private bool wasInstructionShowed = false;
     void Awake()
     {
         if (Instance == null)

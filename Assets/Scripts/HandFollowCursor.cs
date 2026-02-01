@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HandFollowCursor : MonoBehaviour
 {
@@ -15,38 +16,44 @@ public class HandFollowCursor : MonoBehaviour
     public GameObject fireBall;
     private bool isCasting = false;
     public Transform fireballSpawnPoint;
+    public Image cooldownImage;
 
     void Start()
     {
-        SetHandActive(false);
+        SetHandActive(true);
+        handActive = true;
     }
     void Update()
     {
-        if(PlayerMovement.Instance.isMovementLocked) return;
+        if(PlayerMovement.Instance.isMovementLocked || PlayerMovement.Instance.isMovementLocked2|| PlayerMovement.Instance.isDead) return;
         // Przełączanie stanu przy prawym przycisku myszy
-        if (Input.GetMouseButtonDown(1))
-        {
-            handActive = !handActive;
+        // if (Input.GetMouseButtonDown(1))
+        // {
+        //     handActive = !handActive;
 
-            // Włącz/wyłącz widoczność sprite'ów
-            SetHandActive(handActive);
-        }
+        //     // Włącz/wyłącz widoczność sprite'ów
+        //     SetHandActive(handActive);
+        // }
 
         // Jeśli ręka aktywna, podążaj za myszką
         if (handActive)
         {
             Vector3 mousePos = Input.mousePosition;
-            mousePos.z = 0f; // ignorujemy Z w 2D
+            mousePos.z = 0f; 
             Vector3 worldPos = mainCamera.ScreenToWorldPoint(mousePos);
             handTarget.position = new Vector3(worldPos.x, worldPos.y, handTarget.position.z);
-            if (!isCasting)
+            if(Input.GetMouseButtonDown(0))
             {
-                StartCoroutine(CastFireball());
+                if (!isCasting)
+                {
+                    StartCoroutine(CastFireball());
+                }
             }
         }
     }
     public void SetHandActive(bool isActive)
     {
+        Debug.Log("sss");
         handActive = isActive;
 
         handGraphicsRenderer.enabled = handActive;
@@ -61,7 +68,12 @@ public class HandFollowCursor : MonoBehaviour
         
         isCasting = true;
         Instantiate(fireBall, fireballSpawnPoint.position, Quaternion.identity);
-        yield return new WaitForSeconds(2f);
+        cooldownImage.fillAmount = 0f;
+        while (cooldownImage.fillAmount < 1f)
+        {
+            cooldownImage.fillAmount += Time.deltaTime / 1f;
+            yield return null;
+        }
         isCasting = false;
     }
 }
